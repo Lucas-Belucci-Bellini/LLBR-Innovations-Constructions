@@ -4,9 +4,9 @@
   --paper: #f6f7f5;
   --surface: #ffffff;
   --line: #d8ddd7;
-  --brick: #b6542c;
+  --brick: #c35a21;
   --brick-dark: #873c25;
-  --safety: #e3ad24;
+  --safety: #f0a500;
   --moss: #3f6f50;
   --steel: #536170;
   --black: #111416;
@@ -389,6 +389,89 @@ h1 {
   font-weight: 800;
 }
 
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.work-card {
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 4px solid var(--safety);
+  border-radius: 8px;
+  background: #171b1f;
+}
+
+.work-card h3 {
+  margin: 0 0 8px;
+}
+
+.work-card p {
+  margin: 0 0 14px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.work-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.work-images figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.work-images img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.work-images figcaption {
+  min-height: 42px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(17, 20, 22, 0.9);
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-list {
+  margin: 0;
+  padding: 22px;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 6px solid var(--safety);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.contact-list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.contact-list li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-list a {
+  color: var(--white);
+  font-weight: 800;
+}
+
 .process-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -497,11 +580,19 @@ h1 {
 
   .hero-facts,
   .service-grid,
-  .gallery-grid,
+  .before-after-grid,
   .intro-grid,
   .section-heading.split,
   .project-panel,
   .process-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .work-images {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-panel {
     grid-template-columns: 1fr;
   }
 
