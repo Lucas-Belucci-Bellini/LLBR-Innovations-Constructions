@@ -615,3 +615,52 @@ h1 {
     width: 100%;
   }
 }
+
+.before-after-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.before-after-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.before-after-card h3 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+
+.before-after-media {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.before-after-media figure {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.before-after-media img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.before-after-media figcaption {
+  padding: 10px 12px;
+  font-weight: 800;
+  color: var(--steel);
+}
+
+@media (max-width: 760px) {
+  .before-after-media {
+    grid-template-columns: 1fr;
+  }
+}
