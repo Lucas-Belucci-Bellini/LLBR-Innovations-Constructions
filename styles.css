@@ -615,3 +615,54 @@ h1 {
     width: 100%;
   }
 }
+
+.before-after-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.before-after-card {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 8px 20px rgba(16, 20, 24, 0.06);
+}
+
+.before-after-images {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.before-after-images figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.before-after-images img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.before-after-images figcaption {
+  padding: 10px 12px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.before-after-images figure:first-child img {
+  filter: grayscale(35%);
+}
+
+@media (max-width: 980px) {
+  .before-after-grid,
+  .before-after-images {
+    grid-template-columns: 1fr;
+  }
+}
