@@ -4,7 +4,7 @@ Início do site institucional da LLBR Innovations / Constructions, criado a part
 
 ## Criador
 
-Site criado por [Lucas Bellucci Bellini](https://github.com/Lucas-Belucci-Bellini).
+Site criado por [Lucas Belucci Bellini](https://github.com/Lucas-Belucci-Bellini).
 
 ## Dúvidas, bugs e erros
 
