@@ -1,0 +1,19 @@
+{
+  "name": "llbr-innovations-constructions",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Site institucional da LLBR Innovations / Constructions — obras, reformas, projetos e manutenções.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10",
+    "vite-plugin-static-copy": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
