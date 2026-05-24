@@ -3,22 +3,71 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Página não encontrada | LLBR Innovations / Constructions</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Página não encontrada — LLBR Innovations / Constructions</title>
+    <style>
+      :root {
+        --ink: #1a1c1e;
+        --safety: #e3ad24;
+        --brick: #b3501f;
+        --paper: #f5f5f3;
+        --muted: #5a6370;
+        --font: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+      }
+      *, *::before, *::after { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        padding: 40px 24px;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--font);
+        text-align: center;
+      }
+      .brand-mark {
+        display: grid;
+        place-items: center;
+        width: 56px; height: 44px;
+        background: var(--ink);
+        color: #fff;
+        border: 3px solid var(--safety);
+        font-weight: 900;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        margin: 0 auto;
+      }
+      h1 {
+        margin: 0;
+        font-size: clamp(3rem, 12vw, 7rem);
+        line-height: 1;
+        color: var(--brick);
+        letter-spacing: -0.04em;
+      }
+      p { margin: 0; color: var(--muted); font-size: 1.05rem; max-width: 380px; line-height: 1.6; }
+      a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 46px;
+        padding: 0 22px;
+        border-radius: 7px;
+        background: var(--safety);
+        color: var(--ink);
+        font-weight: 800;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: background 0.15s;
+      }
+      a:hover { background: #efc040; }
+    </style>
   </head>
   <body>
-    <main class="section">
-      <div class="section-inner project-panel">
-        <div>
-          <p class="eyebrow">404</p>
-          <h1>Página não encontrada</h1>
-          <p>Volte para a página inicial da LLBR Innovations / Constructions.</p>
-        </div>
-        <div class="project-actions">
-          <a class="button button-primary" href="/">Ir para início</a>
-          <a class="button button-secondary light" href="https://github.com/Lucas-Belucci-Bellini/LBR-Innovations-Constructions/issues" target="_blank" rel="noreferrer">Reportar erro</a>
-        </div>
-      </div>
-    </main>
+    <div class="brand-mark">LLBR</div>
+    <h1>404</h1>
+    <p>Esta página não existe. Volte para o início e encontre o que precisa.</p>
+    <a href="/">Voltar ao início</a>
   </body>
 </html>
