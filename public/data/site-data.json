@@ -20,14 +20,15 @@
     ]
   },
   "services": [
-    { "code": "GESTÃO", "title": "Administração de construções", "desc": "Documentação, autorizações, acompanhamento diário, planejamento, orçamentos, compras, controle de prazos, materiais e equipes.", "featured": true },
-    { "code": "PROJETO", "title": "Projetos", "desc": "Criação ou execução de projetos estruturais, arquitetônicos, elétricos e hidráulicos.", "featured": false },
-    { "code": "OBRA", "title": "Construção e reformas", "desc": "Paredes, pisos, banheiros, cozinhas, piscinas, muros, fundações, rampas, calçadas, telhados, fachadas e anexos.", "featured": false },
-    { "code": "TÉCNICO", "title": "Elétrica", "desc": "Instalação completa, tomadas, interruptores, luminárias, LEDs, sensores, disjuntores, cabeamento, 127V/220V e preparação para ar-condicionado.", "featured": false },
-    { "code": "TÉCNICO", "title": "Hidráulica", "desc": "Água quente e fria, esgoto, pluvial, caixa d'água, bombas, hidrômetros, torneiras, duchas, chuveiros, válvulas e filtros.", "featured": false },
-    { "code": "ACAB.", "title": "Acabamento", "desc": "Pintura, decks, drywall, gesso, vidros, marmoraria, papel de parede, pisos, revestimentos, soleiras e rejuntes.", "featured": false },
-    { "code": "EXTERNO", "title": "Coberturas e estruturas", "desc": "Calhas, rufos, telhados, impermeabilização, serralheria, corrimões, portões, guarda-corpos e estruturas metálicas.", "featured": false },
-    { "code": "APOIO", "title": "Manutenções e apoio", "desc": "Ar-condicionado, placas solares, limpeza de caixa d'água, internet, roçagem, terraplanagem, descarte, fretes e carretos.", "featured": false }
+    { "code": "GESTÃO", "title": "Administração de construções", "desc": "Documentação e autorizações, acompanhamento diário da execução, planejamento, orçamentos, aquisição de materiais, controle de prazos, máquinas, terceiros, fluxo de equipes e aluguel de máquinas e caçambas.", "featured": true },
+    { "code": "PROJETO", "title": "Criação ou execução de projetos", "desc": "Elaboração e execução de projetos estruturais, arquitetônicos, elétricos e hidráulicos, com desenvolvimento e adequação conforme a obra.", "featured": false },
+    { "code": "OBRA", "title": "Construção e reformas", "desc": "Residenciais e comerciais: paredes, pisos, banheiros, cozinhas, piscinas, muros de arrimo e contenção, terraplanagem, fundações, radier, rampas, calçadas, telhados, platibandas, fachadas, anexos, rede de gás e troca de janelas e portas.", "featured": false },
+    { "code": "TÉCNICO", "title": "Elétrica", "desc": "Instalação completa, adequação e reparos: tomadas, interruptores, luminárias, fitas e trilhos de LED, spots, sensores, refletores, chuveiros, disjuntores, cabeamento, preparo de ar-condicionado, ventiladores, exaustores, canaletas de sobrepor, adequação 127V→220V, mapeamento de quadro e cerca eletrificada.", "featured": false },
+    { "code": "REDE", "title": "Internet e cabeamento", "desc": "Instalação e troca de infraestrutura de rede, adequação, cabeamento e crimpagem de pontos de internet.", "featured": false },
+    { "code": "TÉCNICO", "title": "Hidráulica", "desc": "Água quente e fria, esgoto e pluvial, caixa d'água, bombas, captação de água do telhado, manilhas, hidrômetro, boias, torneiras, duchas, chuveiros com crimpagem, válvula Hydra, caixa acoplada, sifões e filtro de água.", "featured": false },
+    { "code": "ACAB.", "title": "Acabamento", "desc": "Pintura interna e externa, muros, fachadas, metais e madeiras, decks, drywall e gesso, vidraçaria (box, espelhos, portas de vidro), marmoraria (granito em bancadas, pias e soleiras), papel de parede, pisos, revestimentos e rejuntes.", "featured": false },
+    { "code": "EXTERNO", "title": "Coberturas e estruturas", "desc": "Telhados e coberturas, troca e adequação de telhas, impermeabilização, calhas e rufos, calafetação, captação de pluviais, serralheria (corrimões, grades, portões, guarda-corpos, estruturas metálicas) e reparos de solda.", "featured": false },
+    { "code": "APOIO", "title": "Manutenções e apoio", "desc": "Ar-condicionado (instalação, conserto e limpeza), placas solares, limpeza de caixa d'água, marcenaria, instalação de eletrodomésticos e suportes, tanques e lagos, terraplanagem, roçagem, descarte de material e fretes e carretos.", "featured": false }
   ],
   "gallery": [
     { "src": "/fotos/galeria/estrutura-01.jpeg", "alt": "Estrutura de obra residencial", "caption": "Estrutura e preparação" },
@@ -45,7 +46,13 @@
     { "src": "/fotos/galeria/ambiente-entregue.jpeg", "alt": "Ambiente entregue com piso laminado", "caption": "Ambiente entregue" },
     { "src": "/fotos/galeria/purificador-agua.jpeg", "alt": "Purificador de água instalado", "caption": "Instalação de purificador" },
     { "src": "/fotos/galeria/reforma-banheiro.jpeg", "alt": "Reforma de banheiro em andamento", "caption": "Reforma de banheiro" },
-    { "src": "/fotos/galeria/eletrica-tomada.jpeg", "alt": "Adequação de módulo de tomada com crimpagem", "caption": "Elétrica: adequação de tomada" }
+    { "src": "/fotos/galeria/eletrica-tomada.jpeg", "alt": "Adequação de módulo de tomada com crimpagem", "caption": "Elétrica: adequação de tomada" },
+    { "src": "/fotos/galeria/reforma-cozinha.jpeg", "alt": "Reforma geral de cozinha em andamento", "caption": "Reforma de cozinha" },
+    { "src": "/fotos/galeria/deck-varanda.jpeg", "alt": "Deck de madeira instalado em varanda", "caption": "Deck de varanda" },
+    { "src": "/fotos/galeria/interruptor-inteligente.jpeg", "alt": "Instalação de interruptor Touch inteligente", "caption": "Interruptor inteligente" },
+    { "src": "/fotos/galeria/tomada-canaleta.jpeg", "alt": "Adequação de tomadas com canaletas de sobrepor", "caption": "Adequação de tomadas" },
+    { "src": "/fotos/galeria/projeto-planta.jpeg", "alt": "Desenvolvimento e adequação de projetos", "caption": "Projetos e plantas" },
+    { "src": "/fotos/galeria/visita-tecnica.jpeg", "alt": "Visita técnica para elaboração de orçamento", "caption": "Visita técnica e orçamento" }
   ],
   "beforeAfter": [
     {
