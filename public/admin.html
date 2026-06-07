@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LLBR Admin</title>
+  <style>
+    /* ─────────────────────────────────────────────────────────
+       Reset e tokens
+       ───────────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    :root {
+      --ink:     #1a1c1e;
+      --muted:   #5a6370;
+      --paper:   #f3f1ea;
+      --surface: #fffdf7;
+      --line:    #e2e4e1;
+      --safety:  #e3ad24;
+      --brick:   #b3501f;
+      --moss:    #3a6645;
+      --black:   #0e1012;
+      --white:   #ffffff;
+      --font: Inter, ui-sans-serif, system-ui, sans-serif;
+      --shadow: 0 8px 32px rgba(10,14,18,0.12);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--paper);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      min-height: 100dvh;
+    }
+
+    /* ─────────────────────────────────────────────────────────
+       Tela de login
+       ───────────────────────────────────────────────────────── */
+    #login-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100dvh;
+      gap: 16px;
+      padding: 24px;
+    }
+
+    #login-screen h1 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+    }
+
+    #login-screen .login-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 32px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 14px;
+    }
+
+    #login-screen label {
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    #login-screen input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-family: var(--font);
+      font-size: 1rem;
+      background: var(--paper);
+    }
+
+    #login-screen input:focus {
+      outline: 2px solid var(--safety);
+      border-color: var(--safety);
+    }
+
+    #login-error {
+      color: var(--brick);
+      font-weight: 700;
+      font-size: 0.88rem;
+      min-height: 1.2em;
+    }
+
+    /* ─────────────────────────────────────────────────────────
+       Botões
+       ───────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: 1.5px solid transparent;
+      font-family: var(--font);
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--safety);
+      color: var(--black);
+      border-color: var(--safety);
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.18);
+    }
+    .btn-primary:hover { background: #efc040; }
+
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--line);
+    }
+    .btn-secondary:hover { border-color: var(--brick); }
+
+    .btn-danger {
+      background: transparent;
+      color: var(--brick);
+      border-color: var(--brick);
+    }
+    .btn-danger:hover { background: rgba(179,80,31,0.08); }
+
+    .btn-sm { padding: 6px 12px; font-size: 0.82rem; }
+    .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+    /* ─────────────────────────────────────────────────────────
+       Painel admin
+       ───────────────────────────────────────────────────────── */
+    #admin-panel { display: flex; flex-direction: column; min-height: 100dvh; }
+
+    .admin-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 24px;
+      min-height: 60px;
+      background: var(--black);
+      color: var(--white);
+      border-bottom: 3px solid var(--safety);
+    }
+
+    .admin-header h1 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+    }
+
+    .admin-header .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.65);
+    }
+
+    /* Token PAT */
+    #pat-field {
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.07);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 0.82rem;
+      width: 200px;
+    }
+    #pat-field::placeholder { color: rgba(255,255,255,0.35); }
+
+    /* Layout principal */
+    .admin-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      flex: 1;
+    }
+
+    /* Sidebar de navegação das abas */
+    .admin-sidebar {
+      background: var(--surface);
+      border-right: 1px solid var(--line);
+      padding: 20px 0;
+    }
+
+    .admin-sidebar nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      padding: 0 10px;
+    }
+
+    .tab-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      background: none;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--muted);
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .tab-btn:hover { background: rgba(26,28,30,0.06); color: var(--ink); }
+    .tab-btn.is-active { background: rgba(227,173,36,0.12); color: var(--brick); }
+
+    .tab-icon { font-size: 1rem; }
+
+    .sidebar-section-title {
+      padding: 16px 24px 6px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* Área de conteúdo das abas */
+    .admin-content {
+      padding: 28px;
+      overflow-y: auto;
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.is-active { display: block; }
+
+    /* ─────────────────────────────────────────────────────────
+       Seções do painel
+       ───────────────────────────────────────────────────────── */
+    .panel-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .panel-header h2 {
+      margin: 0 0 4px;
+      font-size: 1.3rem;
+      letter-spacing: -0.01em;
+    }
+
+    .panel-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    /* Formulários do admin */
+    .admin-form { display: grid; gap: 18px; max-width: 680px; }
+
+    .form-group { display: grid; gap: 6px; }
+
+    .form-group label {
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--ink);
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px 13px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      font-family: var(--font);
+      font-size: 0.95rem;
+      color: var(--ink);
+      transition: border-color 0.15s, outline 0.15s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: 2px solid var(--safety);
+      border-color: var(--safety);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 80px; }
+
+    /* Lista de itens (serviços, galeria, antes/depois) */
+    .item-list { display: grid; gap: 12px; margin: 0; }
+
+    .item-card {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .item-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .item-card-header:hover { background: var(--concrete); }
+
+    .item-card-title {
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    .item-card-body {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .item-card-body.is-collapsed { display: none; }
+
+    .item-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    /* Status de salvar PR */
+    .save-status {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      display: none;
+    }
+    .save-status.ok  { display: block; background: rgba(58,102,69,0.1); color: var(--moss); border: 1px solid var(--moss); }
+    .save-status.err { display: block; background: rgba(179,80,31,0.1); color: var(--brick); border: 1px solid var(--brick); }
+    .save-status.loading { display: block; background: rgba(227,173,36,0.1); color: #8a6000; border: 1px solid var(--safety); }
+
+    /* Tags editor */
+    .tags-textarea {
+      width: 100%;
+      min-height: 200px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      color: var(--ink);
+      resize: vertical;
+    }
+    .tags-textarea:focus { outline: 2px solid var(--safety); border-color: var(--safety); }
+
+    /* Checkbox featured */
+    .featured-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .featured-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--safety); }
+    .featured-row label { font-weight: 700; margin: 0; }
+
+    /* Alerta de status global no topo do conteúdo */
+    .global-status {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 100;
+      max-width: 400px;
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: var(--shadow);
+      display: none;
+      animation: slideIn 0.25s ease;
+    }
+    .global-status.ok      { display: block; background: var(--moss); color: var(--white); }
+    .global-status.err     { display: block; background: var(--brick); color: var(--white); }
+    .global-status.loading { display: block; background: var(--safety); color: var(--black); }
+
+    @keyframes slideIn {
+      from { transform: translateY(12px); opacity: 0; }
+      to   { transform: none; opacity: 1; }
+    }
+
+    /* ─────────────────────────────────────────────────────────
+       Responsive
+       ───────────────────────────────────────────────────────── */
+    @media (max-width: 720px) {
+      .admin-layout { grid-template-columns: 1fr; }
+      .admin-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding: 12px 0;
+      }
+      .admin-sidebar nav { flex-direction: row; flex-wrap: wrap; padding: 0 12px; }
+      .admin-content { padding: 20px 16px; }
+      #pat-field { width: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TELA DE LOGIN
+       Senha simples para bloquear acesso acidental.
+       Não é segurança real — o JSON é público no GitHub.
+       ═══════════════════════════════════════════════════════ -->
+  <div id="login-screen">
+    <div class="login-box">
+      <div style="text-align:center;margin-bottom:8px">
+        <div style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:36px;background:repeating-linear-gradient(135deg,#e3ad24 0 8px,#0e1012 8px 16px);box-shadow:inset 0 0 0 4px #0e1012;border:2px solid #e3ad24;font-weight:900;font-size:0.8rem;color:#fff;letter-spacing:.04em;margin-bottom:8px">LLBR</div>
+        <h1 style="margin:0;font-size:1.4rem">Painel Admin</h1>
+        <p style="margin:4px 0 0;color:#5a6370;font-size:0.85rem">LLBR Innovations / Constructions</p>
+      </div>
+      <div>
+        <label for="admin-pass">Senha do painel</label>
+        <input type="password" id="admin-pass" placeholder="••••••••" autocomplete="current-password">
+      </div>
+      <p id="login-error" aria-live="polite"></p>
+      <button class="btn btn-primary" onclick="login()" style="width:100%">Entrar</button>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       PAINEL ADMIN
+       Visível apenas após autenticação bem-sucedida.
+       ═══════════════════════════════════════════════════════ -->
+  <div id="admin-panel" hidden>
+
+    <header class="admin-header">
+      <h1>&#9733; LLBR Admin</h1>
+      <div class="header-right">
+        <label for="pat-field" style="color:rgba(255,255,255,.55)">GitHub PAT:</label>
+        <input
+          type="password"
+          id="pat-field"
+          placeholder="ghp_... (para criar PR)"
+          autocomplete="off"
+        >
+        <a class="btn btn-sm btn-secondary" href="/" target="_blank">Ver site</a>
+        <button class="btn btn-sm btn-danger" onclick="logout()">Sair</button>
+      </div>
+    </header>
+
+    <div class="admin-layout">
+
+      <!-- Sidebar de navegação -->
+      <aside class="admin-sidebar">
+        <p class="sidebar-section-title">Seções</p>
+        <nav id="tab-nav">
+          <button class="tab-btn is-active" data-tab="contato">
+            <span class="tab-icon">&#128222;</span> Contato
+          </button>
+          <button class="tab-btn" data-tab="servicos">
+            <span class="tab-icon">&#9733;</span> Serviços
+          </button>
+          <button class="tab-btn" data-tab="galeria">
+            <span class="tab-icon">&#128247;</span> Galeria
+          </button>
+          <button class="tab-btn" data-tab="antesdepois">
+            <span class="tab-icon">&#8644;</span> Antes/Depois
+          </button>
+          <button class="tab-btn" data-tab="tags">
+            <span class="tab-icon">&#127991;</span> Tags
+          </button>
+        </nav>
+        <p class="sidebar-section-title" style="margin-top:16px">Dados brutos</p>
+        <nav>
+          <button class="tab-btn" data-tab="json">
+            <span class="tab-icon">&#128196;</span> JSON completo
+          </button>
+        </nav>
+      </aside>
+
+      <!-- Área de conteúdo das abas -->
+      <main class="admin-content">
+
+        <!-- ── Contato ──────────────────────────────────── -->
+        <section class="tab-panel is-active" id="tab-contato">
+          <div class="panel-header">
+            <div>
+              <h2>Informações de contato</h2>
+              <p>Dados exibidos no rodapé do site e nos links de WhatsApp.</p>
+            </div>
+            <button class="btn btn-primary" onclick="saveSection('contact')">
+              Salvar &amp; criar PR
+            </button>
+          </div>
+          <div class="admin-form">
+            <div class="form-group">
+              <label for="c-name">Nome do responsável</label>
+              <input type="text" id="c-name" placeholder="Ricardo">
+            </div>
+            <div class="form-group">
+              <label for="c-phone">Telefone (exibição)</label>
+              <input type="tel" id="c-phone" placeholder="(43) 99991-8594">
+            </div>
+            <div class="form-group">
+              <label for="c-whatsapp">WhatsApp (somente números, com DDI)</label>
+              <input type="text" id="c-whatsapp" placeholder="5543999918594">
+            </div>
+            <div class="form-group">
+              <label for="c-email">E-mail</label>
+              <input type="email" id="c-email" placeholder="llbrinovacoes@gmail.com">
+            </div>
+            <div class="form-group">
+              <label for="c-instagram">Instagram (sem @)</label>
+              <input type="text" id="c-instagram" placeholder="llbr.inovacoes">
+            </div>
+            <div class="form-group">
+              <label for="c-address">Endereço completo</label>
+              <textarea id="c-address" rows="2" placeholder="Av. José Gabriel de Oliveira..."></textarea>
+            </div>
+          </div>
+          <div class="save-status" id="status-contact"></div>
+        </section>
+
+        <!-- ── Serviços ─────────────────────────────────── -->
+        <section class="tab-panel" id="tab-servicos">
+          <div class="panel-header">
+            <div>
+              <h2>Serviços</h2>
+              <p>Cards exibidos na seção "O que a LLBR faz". Arraste para reordenar.</p>
+            </div>
+            <button class="btn btn-primary" onclick="saveSection('services')">
+              Salvar &amp; criar PR
+            </button>
+          </div>
+          <div class="item-list" id="services-list"></div>
+          <div style="margin-top:16px">
+            <button class="btn btn-secondary" onclick="addService()">+ Adicionar serviço</button>
+          </div>
+          <div class="save-status" id="status-services"></div>
+        </section>
+
+        <!-- ── Galeria ──────────────────────────────────── -->
+        <section class="tab-panel" id="tab-galeria">
+          <div class="panel-header">
+            <div>
+              <h2>Galeria de fotos</h2>
+              <p>Fotos exibidas na seção "Fotos de obras e instalações".</p>
+            </div>
+            <button class="btn btn-primary" onclick="saveSection('gallery')">
+              Salvar &amp; criar PR
+            </button>
+          </div>
+          <div class="item-list" id="gallery-list"></div>
+          <div style="margin-top:16px">
+            <button class="btn btn-secondary" onclick="addGalleryItem()">+ Adicionar foto</button>
+          </div>
+          <div class="save-status" id="status-gallery"></div>
+        </section>
+
+        <!-- ── Antes/Depois ─────────────────────────────── -->
+        <section class="tab-panel" id="tab-antesdepois">
+          <div class="panel-header">
+            <div>
+              <h2>Comparações Antes/Depois</h2>
+              <p>Sliders de comparação na seção "Resultados".</p>
+            </div>
+            <button class="btn btn-primary" onclick="saveSection('beforeAfter')">
+              Salvar &amp; criar PR
+            </button>
+          </div>
+          <div class="item-list" id="ba-list"></div>
+          <div style="margin-top:16px">
+            <button class="btn btn-secondary" onclick="addBAItem()">+ Adicionar comparação</button>
+          </div>
+          <div class="save-status" id="status-beforeAfter"></div>
+        </section>
+
+        <!-- ── Tags ─────────────────────────────────────── -->
+        <section class="tab-panel" id="tab-tags">
+          <div class="panel-header">
+            <div>
+              <h2>Tags de atendimento</h2>
+              <p>Uma tag por linha. Serão exibidas na seção "Áreas de atendimento".</p>
+            </div>
+            <button class="btn btn-primary" onclick="saveSection('tags')">
+              Salvar &amp; criar PR
+            </button>
+          </div>
+          <textarea class="tags-textarea" id="tags-editor" placeholder="Construção geral&#10;Reformas residenciais&#10;..."></textarea>
+          <div class="save-status" id="status-tags"></div>
+        </section>
+
+        <!-- ── JSON completo ─────────────────────────────── -->
+        <section class="tab-panel" id="tab-json">
+          <div class="panel-header">
+            <div>
+              <h2>JSON completo</h2>
+              <p>Visualização e edição direta do arquivo site-data.json.</p>
+            </div>
+            <button class="btn btn-primary" onclick="saveRawJson()">
+              Salvar JSON &amp; criar PR
+            </button>
+          </div>
+          <textarea
+            id="json-editor"
+            style="width:100%;min-height:500px;font-family:monospace;font-size:0.85rem;padding:14px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink);resize:vertical;"
+            spellcheck="false"
+          ></textarea>
+          <div class="save-status" id="status-json"></div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Notificação global (canto inferior direito) -->
+  <div class="global-status" id="global-status" role="status" aria-live="polite"></div>
+
+  <script src="/admin.js"></script>
+</body>
+</html>

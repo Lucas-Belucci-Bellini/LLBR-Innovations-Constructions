@@ -37,7 +37,11 @@
     { "src": "/fotos/galeria/instalacoes-01.jpeg", "alt": "Instalações elétricas e hidráulicas", "caption": "Elétrica e hidráulica" },
     { "src": "/fotos/galeria/revestimento-01.jpeg", "alt": "Revestimento de piso e parede", "caption": "Revestimentos" },
     { "src": "/fotos/galeria/fachada-01.jpeg", "alt": "Fachada após reforma externa", "caption": "Fachadas e externas" },
-    { "src": "/fotos/galeria/obra-01.jpeg", "alt": "Visão geral de obra residencial", "caption": "Obra residencial completa" }
+    { "src": "/fotos/galeria/obra-01.jpeg", "alt": "Visão geral de obra residencial", "caption": "Obra residencial completa" },
+    { "src": "/fotos/galeria/sala-entregue-01.jpeg", "alt": "Ambiente entregue com ar-condicionado e piso laminado", "caption": "Ambiente entregue" },
+    { "src": "/fotos/galeria/obra-externa-01.jpeg", "alt": "Obra externa em andamento", "caption": "Obra externa em andamento" },
+    { "src": "/fotos/galeria/eletrica-detalhe-01.jpeg", "alt": "Detalhe de fiação elétrica em parede", "caption": "Detalhe elétrico" },
+    { "src": "/fotos/galeria/hidraulica-cuba-01.jpeg", "alt": "Instalação de cuba e hidráulica de banheiro", "caption": "Hidráulica e cubas" }
   ],
   "beforeAfter": [
     {
