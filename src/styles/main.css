@@ -4,12 +4,14 @@
 :root {
   --ink:          #1a1c1e;
   --muted:        #5a6370;
-  --paper:        #f5f5f3;
-  --surface:      #ffffff;
+  --paper:        #f3f1ea;
+  --surface:      #fffdf7;
+  --concrete:     #d9d7cf;
   --line:         #e2e4e1;
   --safety:       #e3ad24;
   --safety-hover: #efc040;
   --brick:        #b3501f;
+  --brick-dark:   #7d351f;
   --moss:         #3a6645;
   --black:        #0e1012;
   --white:        #ffffff;
@@ -27,7 +29,12 @@
 body {
   margin: 0;
   font-family: var(--font);
-  background: var(--paper);
+  /* Grid de fundo sutil — textura de papel quadriculado */
+  background:
+    linear-gradient(rgba(31,35,38,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31,35,38,0.025) 1px, transparent 1px),
+    var(--paper);
+  background-size: 36px 36px;
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
 }
@@ -96,7 +103,9 @@ p, h1, h2, h3 { overflow-wrap: anywhere; }
   place-items: center;
   width: 48px;
   height: 38px;
-  background: var(--ink);
+  /* Faixas diagonais de canteiro de obras (hazard stripes) */
+  background: repeating-linear-gradient(135deg, var(--safety) 0 8px, var(--black) 8px 16px);
+  box-shadow: inset 0 0 0 5px var(--black);
   color: var(--white);
   border: 2.5px solid var(--safety);
   font-weight: 900;
@@ -179,6 +188,16 @@ body.nav-open .menu-toggle span:nth-child(3) { transform: translateY(-7px) rotat
     url('/assets/hero-interior.jpeg') center / cover no-repeat;
 }
 
+/* Faixa decorativa de canteiro após o hero */
+.hero::after {
+  content: "";
+  display: block;
+  height: 14px;
+  width: min(720px, 100%);
+  background: repeating-linear-gradient(135deg, var(--safety) 0 18px, var(--black) 18px 36px);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
 .hero-content { max-width: 820px; }
 
 .eyebrow {
@@ -250,7 +269,7 @@ h1 {
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
-.button-primary { background: var(--safety); color: var(--black); border-color: var(--safety); }
+.button-primary { background: var(--safety); color: var(--black); border-color: var(--safety); box-shadow: 5px 5px 0 rgba(0,0,0,0.22); }
 .button-primary:hover, .button-primary:focus-visible { background: var(--safety-hover); outline: none; }
 
 .button-secondary { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.42); color: var(--white); }
@@ -264,7 +283,26 @@ h1 {
    ============================================================ */
 .section, .section-band { padding: 96px 6vw; }
 .section-band { background: var(--surface); }
-.section-dark { background: var(--ink); color: var(--white); }
+
+/* Seção escura com grade sutil no fundo */
+.section-dark {
+  background:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px),
+    var(--ink);
+  background-size: 36px 36px;
+  color: var(--white);
+}
+
+/* Seção blueprint — fundo com grade de projeto arquitetônico */
+.blueprint {
+  background:
+    linear-gradient(rgba(31,35,38,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31,35,38,0.04) 1px, transparent 1px),
+    #e7e4da;
+  background-size: 28px 28px;
+}
+
 .section-inner { width: var(--w); margin: 0 auto; }
 
 .section-heading { margin-bottom: 40px; }
@@ -322,6 +360,20 @@ h1 {
   font-size: 1.2rem;
 }
 .service-card.featured .service-card-icon { background: rgba(227,173,36,0.18); }
+
+/* Badge de código do serviço (GESTÃO, TÉCNICO, etc.) */
+.card-code {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 5px 8px;
+  background: rgba(226,169,27,0.18);
+  color: var(--brick-dark, #7d351f);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+}
+.service-card.featured .card-code { background: rgba(226,169,27,0.25); color: var(--safety); }
 
 .service-card h3 { margin: 0 0 8px; font-size: 1rem; line-height: 1.3; }
 .service-card p  { margin: 0; color: var(--muted); line-height: 1.65; font-size: 0.92rem; }
@@ -565,6 +617,31 @@ h1 {
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 .tag-list li:hover { background: var(--surface); border-color: var(--brick); color: var(--brick); }
+
+/* ============================================================
+   FORMULÁRIO DE MELHORIAS
+   ============================================================ */
+.melhoria-form { max-width: 640px; display: grid; gap: 20px; }
+.form-row { display: grid; gap: 6px; }
+.form-row label { font-weight: 800; font-size: 0.9rem; }
+.form-row input, .form-row textarea, .form-row select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--ink);
+}
+.form-row input:focus, .form-row textarea:focus, .form-row select:focus {
+  outline: 2px solid var(--safety);
+  border-color: var(--safety);
+}
+.form-row small { color: var(--muted); font-size: 0.82rem; }
+.form-status { font-weight: 700; min-height: 1.4em; }
+.form-status.ok  { color: var(--moss); }
+.form-status.err { color: var(--brick); }
 
 /* ============================================================
    PROJECT PANEL

@@ -1,0 +1,102 @@
+# ============================================================
+# Sincronização de imagens do Google Drive
+# ============================================================
+# Este workflow baixa imagens de uma pasta do Google Drive e as
+# coloca no repositório, abrindo um Pull Request automático.
+#
+# Como funciona:
+#   1. Pode ser disparado manualmente (workflow_dispatch) informando
+#      o ID da pasta do Drive, ou roda automaticamente todo dia.
+#   2. Usa a ferramenta `gdown` para baixar a pasta inteira.
+#   3. Se houver imagens novas, cria uma branch e abre um PR.
+#   4. O Lucas revisa o PR e faz merge para publicar no site.
+#
+# Pasta padrão do Drive (onde o Ricardo joga fotos/preços novos):
+#   https://drive.google.com/drive/folders/1uqqYv74uaX1eeCN396wlADE3Cynwipq0
+#
+# IMPORTANTE sobre pastas privadas do Drive:
+#   - Para pastas PÚBLICAS (qualquer um com o link), o gdown funciona direto.
+#   - Para pastas PRIVADAS, é preciso configurar um Service Account do Google
+#     e salvar a credencial no secret GDRIVE_CREDENTIALS (JSON). Veja README.
+# ============================================================
+
+name: Sincronizar imagens do Google Drive
+
+on:
+  # Disparo manual pela aba Actions do GitHub
+  workflow_dispatch:
+    inputs:
+      folder_id:
+        description: 'ID da pasta do Google Drive'
+        required: true
+        default: '1uqqYv74uaX1eeCN396wlADE3Cynwipq0'
+  # Disparo automático: todo dia às 6h UTC (3h de Brasília)
+  schedule:
+    - cron: '0 6 * * *'
+
+# Permissões necessárias para o workflow criar branch e abrir PR
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Clona o repositório
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      # 2. Configura o Python (necessário para o gdown)
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      # 3. Instala a ferramenta de download do Google Drive
+      - name: Instalar gdown
+        run: pip install --upgrade gdown
+
+      # 4. Baixa as imagens da pasta do Drive
+      #    O ID vem do input manual ou usa o padrão da pasta do Ricardo
+      - name: Baixar imagens da pasta Drive
+        env:
+          FOLDER_ID: ${{ github.event.inputs.folder_id || '1uqqYv74uaX1eeCN396wlADE3Cynwipq0' }}
+        run: |
+          mkdir -p public/fotos/drive-sync
+          # --folder baixa a pasta inteira; --remaining-ok ignora limites de quota
+          gdown --folder "https://drive.google.com/drive/folders/$FOLDER_ID" \
+            -O public/fotos/drive-sync/ --remaining-ok || true
+
+      # 5. Mostra o que foi baixado (útil para depurar)
+      - name: Verificar arquivos baixados
+        run: ls -la public/fotos/drive-sync/ || echo "Nenhum arquivo baixado."
+
+      # 6. Se houver mudanças, cria branch, comita e abre PR
+      - name: Commit e Pull Request se houver mudanças
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/fotos/drive-sync/
+
+          # Se não houver nada novo no stage, encerra sem erro
+          if git diff --staged --quiet; then
+            echo "Sem novas imagens para sincronizar."
+            exit 0
+          fi
+
+          # Cria uma branch única por data/hora
+          BRANCH="drive-sync/$(date +%Y-%m-%d-%H%M)"
+          git checkout -b "$BRANCH"
+          git commit -m "sync: novas imagens do Google Drive ($(date +%Y-%m-%d))"
+          git push origin "$BRANCH"
+
+          # Abre o PR automaticamente para revisão
+          gh pr create \
+            --title "sync: novas imagens do Google Drive ($(date +%Y-%m-%d))" \
+            --body "Imagens sincronizadas automaticamente da pasta do Google Drive em \`public/fotos/drive-sync/\`.\n\nRevise as imagens e faça merge para publicá-las no site.\n\nDepois do merge, mova/organize as fotos para \`public/fotos/galeria/\` (ou as pastas antes/depois) e atualize o \`public/data/site-data.json\` pelo painel admin." \
+            --base main \
+            --head "$BRANCH" \
+            --draft

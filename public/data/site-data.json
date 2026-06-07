@@ -1,0 +1,103 @@
+{
+  "_version": 2,
+  "_updated": "2026-06-07",
+  "contact": {
+    "name": "Ricardo",
+    "phone": "(43) 99991-8594",
+    "whatsapp": "5543999918594",
+    "email": "llbrinovacoes@gmail.com",
+    "instagram": "llbr.inovacoes",
+    "address": "Av. José Gabriel de Oliveira, 685 — Pq. Aurora, Londrina - PR, CEP 86047-360"
+  },
+  "hero": {
+    "eyebrow": "Obras que entregam o que prometem",
+    "title": "LLBR Innovations / Constructions",
+    "subtitle": "Construções, reformas e manutenções com acompanhamento completo, execução técnica e atenção a cada etapa da obra.",
+    "facts": [
+      { "dt": "Planejamento", "dd": "documentação, orçamento, materiais, prazos e equipes" },
+      { "dt": "Execução", "dd": "alvenaria, elétrica, hidráulica, pisos, telhados e acabamento" },
+      { "dt": "Entrega", "dd": "controle das etapas, descarte, ajustes e manutenção" }
+    ]
+  },
+  "services": [
+    { "code": "GESTÃO", "title": "Administração de construções", "desc": "Documentação, autorizações, acompanhamento diário, planejamento, orçamentos, compras, controle de prazos, materiais e equipes.", "featured": true },
+    { "code": "PROJETO", "title": "Projetos", "desc": "Criação ou execução de projetos estruturais, arquitetônicos, elétricos e hidráulicos.", "featured": false },
+    { "code": "OBRA", "title": "Construção e reformas", "desc": "Paredes, pisos, banheiros, cozinhas, piscinas, muros, fundações, rampas, calçadas, telhados, fachadas e anexos.", "featured": false },
+    { "code": "TÉCNICO", "title": "Elétrica", "desc": "Instalação completa, tomadas, interruptores, luminárias, LEDs, sensores, disjuntores, cabeamento, 127V/220V e preparação para ar-condicionado.", "featured": false },
+    { "code": "TÉCNICO", "title": "Hidráulica", "desc": "Água quente e fria, esgoto, pluvial, caixa d'água, bombas, hidrômetros, torneiras, duchas, chuveiros, válvulas e filtros.", "featured": false },
+    { "code": "ACAB.", "title": "Acabamento", "desc": "Pintura, decks, drywall, gesso, vidros, marmoraria, papel de parede, pisos, revestimentos, soleiras e rejuntes.", "featured": false },
+    { "code": "EXTERNO", "title": "Coberturas e estruturas", "desc": "Calhas, rufos, telhados, impermeabilização, serralheria, corrimões, portões, guarda-corpos e estruturas metálicas.", "featured": false },
+    { "code": "APOIO", "title": "Manutenções e apoio", "desc": "Ar-condicionado, placas solares, limpeza de caixa d'água, internet, roçagem, terraplanagem, descarte, fretes e carretos.", "featured": false }
+  ],
+  "gallery": [
+    { "src": "/fotos/galeria/estrutura-01.jpeg", "alt": "Estrutura de obra residencial", "caption": "Estrutura e preparação" },
+    { "src": "/fotos/galeria/alvenaria-01.jpeg", "alt": "Alvenaria com instalações embutidas", "caption": "Alvenaria e instalações" },
+    { "src": "/fotos/galeria/reforma-01.jpeg", "alt": "Obra de reforma em andamento", "caption": "Reformas em andamento" },
+    { "src": "/fotos/galeria/acabamento-01.jpeg", "alt": "Acabamento fino em ambiente interno", "caption": "Acabamentos internos" },
+    { "src": "/fotos/galeria/instalacoes-01.jpeg", "alt": "Instalações elétricas e hidráulicas", "caption": "Elétrica e hidráulica" },
+    { "src": "/fotos/galeria/revestimento-01.jpeg", "alt": "Revestimento de piso e parede", "caption": "Revestimentos" },
+    { "src": "/fotos/galeria/fachada-01.jpeg", "alt": "Fachada após reforma externa", "caption": "Fachadas e externas" },
+    { "src": "/fotos/galeria/obra-01.jpeg", "alt": "Visão geral de obra residencial", "caption": "Obra residencial completa" },
+    { "src": "/fotos/galeria/deck-madeira-01.jpeg", "alt": "Deck de madeira em área externa", "caption": "Deck de madeira" },
+    { "src": "/fotos/galeria/deck-madeira-02.jpeg", "alt": "Deck de madeira instalado em varanda", "caption": "Instalação de deck" },
+    { "src": "/fotos/galeria/pia-banheiro-granito.jpeg", "alt": "Pia de banheiro em granito com torneira nova", "caption": "Pia e torneira de banheiro" },
+    { "src": "/fotos/galeria/torneira-cozinha.jpeg", "alt": "Torneira de cozinha instalada", "caption": "Torneira de cozinha" },
+    { "src": "/fotos/galeria/ambiente-entregue.jpeg", "alt": "Ambiente entregue com piso laminado", "caption": "Ambiente entregue" },
+    { "src": "/fotos/galeria/purificador-agua.jpeg", "alt": "Purificador de água instalado", "caption": "Instalação de purificador" },
+    { "src": "/fotos/galeria/reforma-banheiro.jpeg", "alt": "Reforma de banheiro em andamento", "caption": "Reforma de banheiro" },
+    { "src": "/fotos/galeria/eletrica-tomada.jpeg", "alt": "Adequação de módulo de tomada com crimpagem", "caption": "Elétrica: adequação de tomada" }
+  ],
+  "beforeAfter": [
+    {
+      "title": "Reforma de corredor interno",
+      "label": "Comparação: corredor antes e depois da reforma",
+      "before": { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.05.jpeg", "alt": "Corredor antes da reforma" },
+      "after":  { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.35.02.jpeg", "alt": "Corredor depois da reforma" }
+    },
+    {
+      "title": "Acabamento de cozinha",
+      "label": "Comparação: cozinha antes e depois do acabamento",
+      "before": { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.45.jpeg", "alt": "Cozinha antes do acabamento" },
+      "after":  { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.35.01.jpeg", "alt": "Cozinha depois do acabamento" }
+    },
+    {
+      "title": "Estrutura e fechamento",
+      "label": "Comparação: estrutura antes e depois do fechamento",
+      "before": { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.08.jpeg", "alt": "Estrutura antes do fechamento" },
+      "after":  { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.58.jpeg", "alt": "Estrutura depois do fechamento" }
+    },
+    {
+      "title": "Reforma de fachada externa",
+      "label": "Comparação: fachada externa antes e depois da reforma",
+      "before": { "src": "/fotos/antes/reforma-externa-antes.jpeg", "alt": "Fachada externa antes da reforma" },
+      "after":  { "src": "/fotos/depois/reforma-externa-depois.jpeg", "alt": "Fachada externa depois da reforma" }
+    },
+    {
+      "title": "Acabamento de ambiente interno",
+      "label": "Comparação: ambiente interno antes e depois do acabamento",
+      "before": { "src": "/fotos/antes/acabamento-interno-antes.jpeg", "alt": "Ambiente interno antes do acabamento" },
+      "after":  { "src": "/fotos/depois/acabamento-interno-depois.jpeg", "alt": "Ambiente interno depois do acabamento" }
+    },
+    {
+      "title": "Renovação completa de cozinha",
+      "label": "Comparação: cozinha antes e depois da renovação",
+      "before": { "src": "/fotos/antes/cozinha2-antes.jpeg", "alt": "Cozinha antes da renovação" },
+      "after":  { "src": "/fotos/depois/cozinha2-depois.jpeg", "alt": "Cozinha depois da renovação" }
+    },
+    {
+      "title": "Troca de torre da caixa acoplada",
+      "label": "Comparação: caixa acoplada antes e depois da troca",
+      "before": { "src": "/fotos/antes/caixa-acoplada-antes.jpeg", "alt": "Caixa acoplada antes da troca da torre de entrada" },
+      "after":  { "src": "/fotos/depois/caixa-acoplada-depois.jpeg", "alt": "Caixa acoplada depois da troca da torre de entrada" }
+    },
+    {
+      "title": "Revisão de compressor e linha de ar",
+      "label": "Comparação: compressor antes e depois da revisão",
+      "before": { "src": "/fotos/antes/compressor-antes.jpeg", "alt": "Compressor antes da revisão e manutenção" },
+      "after":  { "src": "/fotos/depois/compressor-depois.jpeg", "alt": "Compressor depois da revisão e manutenção" }
+    }
+  ],
+  "tags": [
+    "Construção geral","Reformas residenciais","Reformas comerciais","Banheiros","Cozinhas","Piscinas","Muros e arrimos","Terraplanagem","Fundações","Concretagem","Telhados","Fachadas","Elétrica","Hidráulica","Rede de gás","Internet cabeada","Pintura","Decks","Calhas e rufos","Serralheria","Drywall e gesso","Vidros e box","Marcenaria","Marmoraria","Ar-condicionado","Placas solares","Papel de parede","Instalações domésticas","Lagos e tanques","Roçagem","Descarte de material","Fretes e carretos"
+  ]
+}
