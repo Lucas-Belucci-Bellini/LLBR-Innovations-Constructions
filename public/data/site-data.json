@@ -31,14 +31,6 @@
     { "code": "APOIO", "title": "Manutenções e apoio", "desc": "Ar-condicionado (instalação, conserto e limpeza), placas solares, limpeza de caixa d'água, marcenaria, instalação de eletrodomésticos e suportes, tanques e lagos, terraplanagem, roçagem, descarte de material e fretes e carretos.", "featured": false }
   ],
   "gallery": [
-    { "src": "/fotos/galeria/estrutura-01.jpeg", "alt": "Estrutura de obra residencial", "caption": "Estrutura e preparação" },
-    { "src": "/fotos/galeria/alvenaria-01.jpeg", "alt": "Alvenaria com instalações embutidas", "caption": "Alvenaria e instalações" },
-    { "src": "/fotos/galeria/reforma-01.jpeg", "alt": "Obra de reforma em andamento", "caption": "Reformas em andamento" },
-    { "src": "/fotos/galeria/acabamento-01.jpeg", "alt": "Acabamento fino em ambiente interno", "caption": "Acabamentos internos" },
-    { "src": "/fotos/galeria/instalacoes-01.jpeg", "alt": "Instalações elétricas e hidráulicas", "caption": "Elétrica e hidráulica" },
-    { "src": "/fotos/galeria/revestimento-01.jpeg", "alt": "Revestimento de piso e parede", "caption": "Revestimentos" },
-    { "src": "/fotos/galeria/fachada-01.jpeg", "alt": "Fachada após reforma externa", "caption": "Fachadas e externas" },
-    { "src": "/fotos/galeria/obra-01.jpeg", "alt": "Visão geral de obra residencial", "caption": "Obra residencial completa" },
     { "src": "/fotos/galeria/deck-madeira-01.jpeg", "alt": "Deck de madeira em área externa", "caption": "Deck de madeira" },
     { "src": "/fotos/galeria/deck-madeira-02.jpeg", "alt": "Deck de madeira instalado em varanda", "caption": "Instalação de deck" },
     { "src": "/fotos/galeria/pia-banheiro-granito.jpeg", "alt": "Pia de banheiro em granito com torneira nova", "caption": "Pia e torneira de banheiro" },
@@ -55,42 +47,6 @@
     { "src": "/fotos/galeria/visita-tecnica.jpeg", "alt": "Visita técnica para elaboração de orçamento", "caption": "Visita técnica e orçamento" }
   ],
   "beforeAfter": [
-    {
-      "title": "Reforma de corredor interno",
-      "label": "Comparação: corredor antes e depois da reforma",
-      "before": { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.05.jpeg", "alt": "Corredor antes da reforma" },
-      "after":  { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.35.02.jpeg", "alt": "Corredor depois da reforma" }
-    },
-    {
-      "title": "Acabamento de cozinha",
-      "label": "Comparação: cozinha antes e depois do acabamento",
-      "before": { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.45.jpeg", "alt": "Cozinha antes do acabamento" },
-      "after":  { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.35.01.jpeg", "alt": "Cozinha depois do acabamento" }
-    },
-    {
-      "title": "Estrutura e fechamento",
-      "label": "Comparação: estrutura antes e depois do fechamento",
-      "before": { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.08.jpeg", "alt": "Estrutura antes do fechamento" },
-      "after":  { "src": "/WhatsApp%20Unknown%202026-05-20%20at%2013.07.41/WhatsApp%20Image%202026-05-10%20at%2020.34.58.jpeg", "alt": "Estrutura depois do fechamento" }
-    },
-    {
-      "title": "Reforma de fachada externa",
-      "label": "Comparação: fachada externa antes e depois da reforma",
-      "before": { "src": "/fotos/antes/reforma-externa-antes.jpeg", "alt": "Fachada externa antes da reforma" },
-      "after":  { "src": "/fotos/depois/reforma-externa-depois.jpeg", "alt": "Fachada externa depois da reforma" }
-    },
-    {
-      "title": "Acabamento de ambiente interno",
-      "label": "Comparação: ambiente interno antes e depois do acabamento",
-      "before": { "src": "/fotos/antes/acabamento-interno-antes.jpeg", "alt": "Ambiente interno antes do acabamento" },
-      "after":  { "src": "/fotos/depois/acabamento-interno-depois.jpeg", "alt": "Ambiente interno depois do acabamento" }
-    },
-    {
-      "title": "Renovação completa de cozinha",
-      "label": "Comparação: cozinha antes e depois da renovação",
-      "before": { "src": "/fotos/antes/cozinha2-antes.jpeg", "alt": "Cozinha antes da renovação" },
-      "after":  { "src": "/fotos/depois/cozinha2-depois.jpeg", "alt": "Cozinha depois da renovação" }
-    },
     {
       "title": "Troca de torre da caixa acoplada",
       "label": "Comparação: caixa acoplada antes e depois da troca",
