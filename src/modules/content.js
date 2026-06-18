@@ -112,6 +112,45 @@ function renderServicos(servicos, container) {
 }
 
 // ─────────────────────────────────────────────────────────────
+// RENDERIZAÇÃO DOS CARDS "ENTENDA CADA SERVIÇO"
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Renderiza os cards explicativos da seção "Entenda cada serviço".
+ * Diferente dos cards de serviço (que listam o que a LLBR faz), estes
+ * explicam em linguagem simples o que é cada área e quando o cliente
+ * deve chamar — para ele identificar se o problema dele se encaixa.
+ *
+ * Cada explicador tem:
+ *   - icon: emoji ilustrativo (vem direto do JSON)
+ *   - title: nome da área (Hidráulica, Marcenaria, Marmoraria...)
+ *   - what: o que é, em linguagem fácil
+ *   - when: quando chamar / sinais de que o cliente precisa
+ *
+ * @param {Array} explainers - Array de {icon, title, what, when}
+ * @param {HTMLElement} container - Elemento onde os cards serão inseridos
+ */
+function renderExplainers(explainers, container) {
+  if (!container || !Array.isArray(explainers)) return
+
+  let delayIndex = 0
+
+  const html = explainers.map((item) => {
+    delayIndex = (delayIndex % 3) + 1
+    return `
+      <article class="explainer-card" data-reveal data-delay="${delayIndex}">
+        <div class="explainer-icon" aria-hidden="true">${escapeHtml(item.icon)}</div>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p class="explainer-what">${escapeHtml(item.what)}</p>
+        <p class="explainer-when"><strong>Quando chamar:</strong> ${escapeHtml(item.when)}</p>
+      </article>
+    `
+  }).join('')
+
+  container.innerHTML = html
+}
+
+// ─────────────────────────────────────────────────────────────
 // RENDERIZAÇÃO DE GALERIA
 // ─────────────────────────────────────────────────────────────
 
@@ -337,6 +376,11 @@ export async function initContent() {
   // O container #service-list foi esvaziado no HTML para ser preenchido aqui
   const containerServicos = document.getElementById('service-list')
   renderServicos(dados.services, containerServicos)
+
+  // ── Entenda cada serviço ──────────────────────────────────
+  // Cards em linguagem simples explicando cada área e quando chamar
+  const containerExplainers = document.getElementById('explainer-list')
+  renderExplainers(dados.serviceExplainers, containerExplainers)
 
   // ── Galeria ───────────────────────────────────────────────
   // O container #gallery-grid tem o atributo data-lightbox para o lightbox

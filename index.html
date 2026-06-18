@@ -28,6 +28,7 @@
       </button>
       <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
         <a href="#servicos">Serviços</a>
+        <a href="#entenda">Entenda</a>
         <a href="#obras">Obras</a>
         <a href="#resultados">Resultados</a>
         <a href="#processo">Processo</a>
@@ -95,6 +96,24 @@
             A classe service-grid aplica o layout em grade.
           -->
           <div id="service-list" class="service-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- ENTENDA CADA SERVIÇO — cards explicativos (content.js → #explainer-list) -->
+      <section class="section section-band" id="entenda" aria-labelledby="entenda-title">
+        <div class="section-inner">
+          <div class="section-heading split" data-reveal>
+            <div>
+              <p class="eyebrow">Entenda cada serviço</p>
+              <h2 id="entenda-title">Qual serviço o seu problema precisa?</h2>
+            </div>
+            <p>Explicamos em palavras simples o que é cada área e quando chamar a LLBR. Assim fica fácil saber em qual serviço o seu caso se encaixa — sem termo técnico complicado.</p>
+          </div>
+          <!--
+            Container vazio: content.js injeta os cards explicativos aqui,
+            a partir do array serviceExplainers do site-data.json.
+          -->
+          <div id="explainer-list" class="explainer-grid" aria-live="polite"></div>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 {
-  "_version": 2,
-  "_updated": "2026-06-07",
+  "_version": 3,
+  "_updated": "2026-06-18",
   "contact": {
     "name": "Ricardo",
     "phone": "(43) 99991-8594",
@@ -30,6 +30,16 @@
     { "code": "EXTERNO", "title": "Coberturas e estruturas", "desc": "Telhados e coberturas, troca e adequação de telhas, impermeabilização, calhas e rufos, calafetação, captação de pluviais, serralheria (corrimões, grades, portões, guarda-corpos, estruturas metálicas) e reparos de solda.", "featured": false },
     { "code": "APOIO", "title": "Manutenções e apoio", "desc": "Ar-condicionado (instalação, conserto e limpeza), placas solares, limpeza de caixa d'água, marcenaria, instalação de eletrodomésticos e suportes, tanques e lagos, terraplanagem, roçagem, descarte de material e fretes e carretos.", "featured": false }
   ],
+  "serviceExplainers": [
+    { "icon": "💧", "title": "Hidráulica", "what": "Tudo o que envolve água e esgoto na casa: canos, torneiras, chuveiros, caixa d'água, sifões, vazamentos e entupimentos.", "when": "Conta de água alta sem motivo, mancha de umidade na parede, pouca pressão, pia ou ralo entupido, ou troca de torneira, sifão e chuveiro." },
+    { "icon": "⚡", "title": "Elétrica", "what": "Tomadas, interruptores, lâmpadas, chuveiro, disjuntores e o quadro de luz — a parte que leva energia até cada ponto da casa.", "when": "Disjuntor que desarma, tomada que não funciona, luz piscando, cheiro de queimado, ou para instalar ar-condicionado e pontos novos." },
+    { "icon": "🪵", "title": "Marcenaria", "what": "Peças e móveis de madeira: prateleiras, painéis, portas, armários, decks e ajustes em móveis que já existem.", "when": "Instalar prateleira ou suporte de TV, colocar ou ajustar porta, montar móvel, fazer um deck ou consertar uma peça de madeira." },
+    { "icon": "🪨", "title": "Marmoraria", "what": "Pedras como granito e mármore: bancadas de cozinha, pias, soleiras de porta e peitoris de janela, cortadas e instaladas sob medida.", "when": "Trocar a bancada da cozinha, colocar uma pia de granito, ou instalar soleira de porta e peitoril de janela em pedra." },
+    { "icon": "🧱", "title": "Alvenaria e pisos", "what": "A parte bruta da obra: paredes, reboco, contrapiso e o assentamento de pisos e azulejos.", "when": "Levantar ou derrubar parede, piso soltando ou com som de \"oco\", trocar revestimento, ou nivelar um piso torto." },
+    { "icon": "🏠", "title": "Telhados e calhas", "what": "A cobertura da casa: telhas, calhas, rufos e impermeabilização que protegem tudo da chuva.", "when": "Telhado pingando, infiltração no teto, calha entupida ou furada, ou manchas de mofo que aparecem depois da chuva." },
+    { "icon": "🧰", "title": "Drywall e gesso", "what": "Paredes leves, forros e sancas feitos de gesso ou drywall — rápidos de montar e ótimos para acabamento.", "when": "Dividir um ambiente, fazer forro, esconder fiação, ou criar nichos e iluminação embutida." },
+    { "icon": "🎨", "title": "Acabamento e pintura", "what": "A parte final que deixa tudo bonito: pintura, vidros, box, espelhos, papel de parede e os detalhes.", "when": "Repintar ambientes, colocar box ou espelho, aplicar papel de parede, ou dar o acabamento final da reforma." }
+  ],
   "gallery": [
     { "src": "/fotos/galeria/deck-madeira-01.jpeg", "alt": "Deck de madeira em área externa", "caption": "Deck de madeira" },
     { "src": "/fotos/galeria/deck-madeira-02.jpeg", "alt": "Deck de madeira instalado em varanda", "caption": "Instalação de deck" },
@@ -44,7 +54,21 @@
     { "src": "/fotos/galeria/interruptor-inteligente.jpeg", "alt": "Instalação de interruptor Touch inteligente", "caption": "Interruptor inteligente" },
     { "src": "/fotos/galeria/tomada-canaleta.jpeg", "alt": "Adequação de tomadas com canaletas de sobrepor", "caption": "Adequação de tomadas" },
     { "src": "/fotos/galeria/projeto-planta.jpeg", "alt": "Desenvolvimento e adequação de projetos", "caption": "Projetos e plantas" },
-    { "src": "/fotos/galeria/visita-tecnica.jpeg", "alt": "Visita técnica para elaboração de orçamento", "caption": "Visita técnica e orçamento" }
+    { "src": "/fotos/galeria/visita-tecnica.jpeg", "alt": "Visita técnica para elaboração de orçamento", "caption": "Visita técnica e orçamento" },
+    { "src": "/fotos/galeria/reforma-sifao-pia.jpeg", "alt": "Reforma e instalação de sifão de pia em cozinha", "caption": "Reforma de sifão de pia" },
+    { "src": "/fotos/galeria/adaptador-esgoto-lavalouca.jpeg", "alt": "Instalação de adaptador de esgoto para lava-louças", "caption": "Esgoto para lava-louças" },
+    { "src": "/fotos/galeria/troca-hidrometro.jpeg", "alt": "Troca de hidrômetro de água", "caption": "Troca de hidrômetro" },
+    { "src": "/fotos/galeria/filtro-bebedouro.jpeg", "alt": "Instalação de filtro e bebedouro de água", "caption": "Filtros e bebedouros" },
+    { "src": "/fotos/galeria/caixa-dagua-pressurizador.jpeg", "alt": "Limpeza de caixa d'água e instalação de pressurizador mecânico", "caption": "Pressurizador de água" },
+    { "src": "/fotos/galeria/medidor-energia.jpeg", "alt": "Instalação de medidor de energia elétrica individual", "caption": "Medidor de energia individual" },
+    { "src": "/fotos/galeria/tomadas-127-220.jpeg", "alt": "Ponto de tomadas 127V e 220V com caixa de PVC de sobrepor", "caption": "Tomadas 127V e 220V" },
+    { "src": "/fotos/galeria/iluminacao-consultorio.jpeg", "alt": "Iluminação instalada em consultório", "caption": "Iluminação de consultório" },
+    { "src": "/fotos/galeria/vidracaria-espelho.jpeg", "alt": "Instalação de espelho e serviços de vidraçaria", "caption": "Vidraçaria e espelhos" },
+    { "src": "/fotos/galeria/porta-correr.jpeg", "alt": "Instalação de porta de correr", "caption": "Porta de correr" },
+    { "src": "/fotos/galeria/porta-drywall.jpeg", "alt": "Instalação de porta em parede de drywall", "caption": "Porta em drywall" },
+    { "src": "/fotos/galeria/barra-apoio-banheiro.jpeg", "alt": "Instalação de barra de apoio em banheiro", "caption": "Barra de apoio de banheiro" },
+    { "src": "/fotos/galeria/quadros-prateleiras.jpeg", "alt": "Instalação de quadros e prateleiras na parede", "caption": "Quadros e prateleiras" },
+    { "src": "/fotos/galeria/impermeabilizacao-telhado.jpeg", "alt": "Impermeabilização de telhado e estrutura para conter vazamentos", "caption": "Impermeabilização de telhado" }
   ],
   "beforeAfter": [
     {
@@ -58,6 +82,12 @@
       "label": "Comparação: compressor antes e depois da revisão",
       "before": { "src": "/fotos/antes/compressor-antes.jpeg", "alt": "Compressor antes da revisão e manutenção" },
       "after":  { "src": "/fotos/depois/compressor-depois.jpeg", "alt": "Compressor depois da revisão e manutenção" }
+    },
+    {
+      "title": "Pintura de teto de banheiro",
+      "label": "Comparação: teto do banheiro antes e depois da pintura e tratamento de umidade",
+      "before": { "src": "/fotos/antes/pintura-banheiro-antes.jpeg", "alt": "Teto do banheiro com manchas de umidade antes da pintura" },
+      "after":  { "src": "/fotos/depois/pintura-banheiro-depois.jpeg", "alt": "Teto do banheiro pintado e sem manchas depois da reforma" }
     }
   ],
   "tags": [
