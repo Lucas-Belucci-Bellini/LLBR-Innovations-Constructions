@@ -22,7 +22,7 @@
  */
 
 import { initSliders } from './slider.js'
-import { initLightbox } from './lightbox.js'
+import { initLightbox, openLightboxGroup } from './lightbox.js'
 import { initScroll } from './scroll.js'
 
 // ─────────────────────────────────────────────────────────────
@@ -112,6 +112,45 @@ function renderServicos(servicos, container) {
 }
 
 // ─────────────────────────────────────────────────────────────
+// RENDERIZAÇÃO DOS CARDS "ENTENDA CADA SERVIÇO"
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Renderiza os cards explicativos da seção "Entenda cada serviço".
+ * Diferente dos cards de serviço (que listam o que a LLBR faz), estes
+ * explicam em linguagem simples o que é cada área e quando o cliente
+ * deve chamar — para ele identificar se o problema dele se encaixa.
+ *
+ * Cada explicador tem:
+ *   - icon: emoji ilustrativo (vem direto do JSON)
+ *   - title: nome da área (Hidráulica, Marcenaria, Marmoraria...)
+ *   - what: o que é, em linguagem fácil
+ *   - when: quando chamar / sinais de que o cliente precisa
+ *
+ * @param {Array} explainers - Array de {icon, title, what, when}
+ * @param {HTMLElement} container - Elemento onde os cards serão inseridos
+ */
+function renderExplainers(explainers, container) {
+  if (!container || !Array.isArray(explainers)) return
+
+  let delayIndex = 0
+
+  const html = explainers.map((item) => {
+    delayIndex = (delayIndex % 3) + 1
+    return `
+      <article class="explainer-card" data-reveal data-delay="${delayIndex}">
+        <div class="explainer-icon" aria-hidden="true">${escapeHtml(item.icon)}</div>
+        <h3>${escapeHtml(item.title)}</h3>
+        <p class="explainer-what">${escapeHtml(item.what)}</p>
+        <p class="explainer-when"><strong>Quando chamar:</strong> ${escapeHtml(item.when)}</p>
+      </article>
+    `
+  }).join('')
+
+  container.innerHTML = html
+}
+
+// ─────────────────────────────────────────────────────────────
 // RENDERIZAÇÃO DE GALERIA
 // ─────────────────────────────────────────────────────────────
 
@@ -127,11 +166,12 @@ function renderServicos(servicos, container) {
 function renderGaleria(galeria, container) {
   if (!container || !Array.isArray(galeria)) return
 
-  // Delay escalonado para animação sequencial das fotos
+  // Delay escalonado para animação sequencial das fotos.
+  // data-category alimenta o filtro por tipo de serviço (renderGalleryFilters).
   const html = galeria.map((foto, i) => {
     const delay = (i % 3) + 1
     return `
-      <figure data-reveal data-delay="${delay}">
+      <figure data-reveal data-delay="${delay}" data-category="${escapeHtml(foto.category || '')}">
         <img
           src="${foto.src}"
           alt="${escapeHtml(foto.alt)}"
@@ -143,6 +183,154 @@ function renderGaleria(galeria, container) {
   }).join('')
 
   container.innerHTML = html
+}
+
+// ─────────────────────────────────────────────────────────────
+// FILTROS DA GALERIA (por categoria de serviço)
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Renderiza os chips de filtro e liga o comportamento de filtragem.
+ * Ao clicar num chip, esconde/mostra as <figure> da galeria cujo
+ * data-category não bate com o filtro. "todos" mostra tudo.
+ *
+ * @param {Array<{slug,label}>} categorias
+ * @param {HTMLElement} filterContainer - onde os chips são inseridos
+ * @param {HTMLElement} gridContainer - a galeria (#gallery-grid)
+ */
+function renderGalleryFilters(categorias, filterContainer, gridContainer) {
+  if (!filterContainer || !gridContainer || !Array.isArray(categorias)) return
+
+  filterContainer.innerHTML = categorias.map((cat, i) => `
+    <button type="button" class="gallery-chip${i === 0 ? ' is-active' : ''}" data-filter="${escapeHtml(cat.slug)}">
+      ${escapeHtml(cat.label)}
+    </button>
+  `).join('')
+
+  filterContainer.addEventListener('click', (evento) => {
+    const botao = evento.target.closest('.gallery-chip')
+    if (!botao) return
+
+    filterContainer.querySelectorAll('.gallery-chip').forEach((b) => b.classList.remove('is-active'))
+    botao.classList.add('is-active')
+
+    const filtro = botao.dataset.filter
+    gridContainer.querySelectorAll('figure').forEach((fig) => {
+      const mostra = filtro === 'todos' || fig.dataset.category === filtro
+      fig.hidden = !mostra
+    })
+  })
+}
+
+// ─────────────────────────────────────────────────────────────
+// PROJETOS EM DESTAQUE (álbuns)
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Renderiza os cards de projetos em destaque. Cada card mostra uma capa
+ * e a quantidade de fotos; clicar abre o álbum no lightbox com navegação.
+ *
+ * @param {Array} projetos - {key,title,location,desc,cover,photos[]}
+ * @param {HTMLElement} container - #projects-grid
+ */
+function renderProjects(projetos, container) {
+  if (!container || !Array.isArray(projetos)) return
+
+  container.innerHTML = projetos.map((p, i) => {
+    const delay = (i % 3) + 1
+    const total = Array.isArray(p.photos) ? p.photos.length : 0
+    return `
+      <article class="project-card" data-reveal data-delay="${delay}">
+        <button type="button" class="project-cover" data-project="${i}" aria-label="Abrir álbum: ${escapeHtml(p.title)}">
+          <img src="${p.cover}" alt="${escapeHtml(p.alt || p.title)}" loading="lazy">
+          <span class="project-count">${total} fotos</span>
+        </button>
+        <div class="project-info">
+          <h3>${escapeHtml(p.title)}</h3>
+          ${p.location ? `<p class="project-loc">${escapeHtml(p.location)}</p>` : ''}
+          <p class="project-desc">${escapeHtml(p.desc || '')}</p>
+        </div>
+      </article>
+    `
+  }).join('')
+
+  container.addEventListener('click', (evento) => {
+    const botao = evento.target.closest('[data-project]')
+    if (!botao) return
+    const projeto = projetos[Number(botao.dataset.project)]
+    if (projeto && Array.isArray(projeto.photos)) {
+      const itens = projeto.photos.map((ph) => ({ src: ph.src, alt: ph.alt, caption: projeto.title }))
+      openLightboxGroup(itens, 0)
+    }
+  })
+}
+
+// ─────────────────────────────────────────────────────────────
+// DICAS & SEGURANÇA
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Renderiza os cards educativos (autoridade + SEO).
+ * @param {Array} dicas - {icon,title,body,images[]}
+ * @param {HTMLElement} container - #tips-grid
+ */
+function renderTips(dicas, container) {
+  if (!container || !Array.isArray(dicas)) return
+
+  container.innerHTML = dicas.map((t, i) => {
+    const delay = (i % 3) + 1
+    const img = Array.isArray(t.images) ? t.images[0] : null
+    return `
+      <article class="tip-card" data-reveal data-delay="${delay}">
+        ${img ? `<img class="tip-img" src="${img}" alt="${escapeHtml(t.title)}" loading="lazy">` : ''}
+        <div class="tip-body">
+          <div class="tip-icon" aria-hidden="true">${escapeHtml(t.icon || '💡')}</div>
+          <h3>${escapeHtml(t.title)}</h3>
+          <p>${escapeHtml(t.body)}</p>
+        </div>
+      </article>
+    `
+  }).join('')
+}
+
+// ─────────────────────────────────────────────────────────────
+// FAQ
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Renderiza o FAQ como acordeão acessível (<details>/<summary>).
+ * @param {Array<{q,a}>} faq
+ * @param {HTMLElement} container - #faq-list
+ */
+function renderFaq(faq, container) {
+  if (!container || !Array.isArray(faq)) return
+
+  container.innerHTML = faq.map((item) => `
+    <details class="faq-item" data-reveal>
+      <summary>${escapeHtml(item.q)}</summary>
+      <div class="faq-answer"><p>${escapeHtml(item.a)}</p></div>
+    </details>
+  `).join('')
+}
+
+// ─────────────────────────────────────────────────────────────
+// NÚMEROS / PROVAS SOCIAIS
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Renderiza a faixa de números/credibilidade.
+ * @param {Array<{number,label}>} stats
+ * @param {HTMLElement} container - #stats-grid
+ */
+function renderStats(stats, container) {
+  if (!container || !Array.isArray(stats)) return
+
+  container.innerHTML = stats.map((s, i) => `
+    <div class="stat" data-reveal data-delay="${(i % 3) + 1}">
+      <span class="stat-num">${escapeHtml(s.number)}</span>
+      <span class="stat-label">${escapeHtml(s.label)}</span>
+    </div>
+  `).join('')
 }
 
 // ─────────────────────────────────────────────────────────────
@@ -338,10 +526,35 @@ export async function initContent() {
   const containerServicos = document.getElementById('service-list')
   renderServicos(dados.services, containerServicos)
 
+  // ── Entenda cada serviço ──────────────────────────────────
+  // Cards em linguagem simples explicando cada área e quando chamar
+  const containerExplainers = document.getElementById('explainer-list')
+  renderExplainers(dados.serviceExplainers, containerExplainers)
+
   // ── Galeria ───────────────────────────────────────────────
   // O container #gallery-grid tem o atributo data-lightbox para o lightbox
   const containerGaleria = document.getElementById('gallery-grid')
   renderGaleria(dados.gallery, containerGaleria)
+
+  // ── Filtros da galeria (por categoria) ────────────────────
+  const containerFiltros = document.getElementById('gallery-filters')
+  renderGalleryFilters(dados.galleryCategories, containerFiltros, containerGaleria)
+
+  // ── Projetos em destaque (álbuns) ─────────────────────────
+  const containerProjetos = document.getElementById('projects-grid')
+  renderProjects(dados.projects, containerProjetos)
+
+  // ── Dicas & Segurança ─────────────────────────────────────
+  const containerDicas = document.getElementById('tips-grid')
+  renderTips(dados.tips, containerDicas)
+
+  // ── FAQ ───────────────────────────────────────────────────
+  const containerFaq = document.getElementById('faq-list')
+  renderFaq(dados.faq, containerFaq)
+
+  // ── Números / provas sociais ──────────────────────────────
+  const containerStats = document.getElementById('stats-grid')
+  renderStats(dados.stats, containerStats)
 
   // ── Antes/Depois ─────────────────────────────────────────
   // O container #ba-grid será preenchido com os sliders interativos

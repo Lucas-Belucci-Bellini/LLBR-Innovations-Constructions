@@ -236,6 +236,10 @@ function criarCardGaleria(foto, index) {
           <label>Legenda</label>
           <input type="text" data-field="caption" value="${esc(foto.caption)}" placeholder="Legenda exibida">
         </div>
+        <div class="form-group">
+          <label>Categoria (filtro da galeria)</label>
+          <input type="text" data-field="category" value="${esc(foto.category || '')}" placeholder="hidraulica, eletrica, telhados, alvenaria, drywall, marcenaria, acabamento, gestao">
+        </div>
         <div class="item-actions">
           <button class="btn btn-sm btn-danger" onclick="removerItem('gallery', ${index})">Remover</button>
         </div>
@@ -363,11 +367,17 @@ function lerFormularios() {
 
   // ── Galeria ────────────────────────────────────────────────
   const cardsGaleria = document.querySelectorAll('#gallery-list .item-card')
-  dados.gallery = Array.from(cardsGaleria).map((card) => ({
-    src:     getFieldVal(card, 'src'),
-    alt:     getFieldVal(card, 'alt'),
-    caption: getFieldVal(card, 'caption'),
-  }))
+  dados.gallery = Array.from(cardsGaleria).map((card) => {
+    const item = {
+      src:     getFieldVal(card, 'src'),
+      alt:     getFieldVal(card, 'alt'),
+      caption: getFieldVal(card, 'caption'),
+    }
+    // Só inclui a categoria se preenchida, para não poluir fotos sem filtro
+    const cat = getFieldVal(card, 'category')
+    if (cat) item.category = cat
+    return item
+  })
 
   // ── Antes/Depois ───────────────────────────────────────────
   const cardsBA = document.querySelectorAll('#ba-list .item-card')
@@ -466,6 +476,7 @@ function addGalleryItem() {
     src: '/fotos/galeria/nova-foto.jpeg',
     alt: 'Descrição da foto',
     caption: 'Legenda',
+    category: 'acabamento',
   })
   popularListaGaleria(dadosAtuais.gallery)
 }
