@@ -332,44 +332,6 @@
         </div>
       </section>
 
-      <!-- PEDIDOS DE MELHORIA — formulário que cria issues no GitHub -->
-      <section class="section section-band" id="melhorias" aria-labelledby="melhorias-title">
-        <div class="section-inner">
-          <div class="section-heading" data-reveal>
-            <p class="eyebrow">Contribua</p>
-            <h2 id="melhorias-title">Pedidos de melhoria do site</h2>
-            <p>Tem uma sugestão, erro ou melhoria para o site? Envie abaixo e vira um pedido registrado no GitHub.</p>
-          </div>
-          <form class="melhoria-form" id="melhoria-form" novalidate>
-            <div class="form-row">
-              <label for="melhoria-titulo">Título do pedido *</label>
-              <input type="text" id="melhoria-titulo" name="titulo" required placeholder="Ex: Adicionar seção de preços">
-            </div>
-            <div class="form-row">
-              <label for="melhoria-desc">Descrição detalhada *</label>
-              <textarea id="melhoria-desc" name="descricao" rows="4" required placeholder="Descreva o que gostaria de ver ou melhorar no site..."></textarea>
-            </div>
-            <div class="form-row">
-              <label for="melhoria-tipo">Tipo</label>
-              <select id="melhoria-tipo" name="tipo">
-                <option value="melhoria">Melhoria</option>
-                <option value="bug">Bug / Erro</option>
-                <option value="conteudo">Conteúdo</option>
-                <option value="foto">Foto</option>
-                <option value="outro">Outro</option>
-              </select>
-            </div>
-            <div class="form-row">
-              <label for="melhoria-token">Token GitHub (opcional — para criar issue automaticamente)</label>
-              <input type="password" id="melhoria-token" name="token" placeholder="ghp_...">
-              <small>Sem token: abre página de issue no GitHub. Com token: cria direto.</small>
-            </div>
-            <button type="submit" class="button button-primary">Enviar pedido</button>
-            <p class="form-status" id="form-status" aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
-
     </main>
 
     <!-- FOOTER / CONTATO — links atualizados por content.js via data-contact -->
