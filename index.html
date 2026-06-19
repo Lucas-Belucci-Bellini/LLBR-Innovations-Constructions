@@ -3,14 +3,70 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="LLBR Innovations / Constructions: obras, reformas, projetos, instalações e manutenções residenciais e comerciais em Londrina e região.">
+    <meta name="description" content="Construções, reformas e manutenções em Londrina e região: elétrica, hidráulica, telhados, drywall, alvenaria e acabamento. Do projeto à entrega, com acompanhamento completo. Peça seu orçamento.">
+    <meta name="keywords" content="reforma em Londrina, construção Londrina, pedreiro Londrina, eletricista Londrina, encanador Londrina, reforma residencial, reforma comercial, drywall, telhado, hidráulica, elétrica">
     <meta name="author" content="Lucas Belucci Bellini">
-    <meta property="og:title" content="LLBR Innovations / Constructions">
-    <meta property="og:description" content="Obras, reformas, projetos e manutenções com acompanhamento completo.">
+    <meta name="geo.region" content="BR-PR">
+    <meta name="geo.placename" content="Londrina">
+    <meta name="theme-color" content="#e3ad24">
+
+    <!-- Open Graph (compartilhamento em WhatsApp, Facebook, Instagram) -->
+    <meta property="og:title" content="LLBR Construções e Reformas em Londrina">
+    <meta property="og:description" content="Obras, reformas e manutenções residenciais, comerciais e industriais em Londrina e região — do projeto à entrega.">
     <meta property="og:image" content="/assets/hero-interior.jpeg">
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="LLBR Innovations / Constructions">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LLBR Construções e Reformas em Londrina">
+    <meta name="twitter:description" content="Obras, reformas e manutenções em Londrina e região — do projeto à entrega.">
+    <meta name="twitter:image" content="/assets/hero-interior.jpeg">
+
     <link rel="preload" as="image" href="/assets/hero-interior.jpeg">
-    <title>LLBR Innovations / Constructions</title>
+    <title>LLBR Construções e Reformas em Londrina | Obras, Elétrica e Hidráulica</title>
+
+    <!-- Dados estruturados: negócio local (ajuda a aparecer no Google e no Maps) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "name": "LLBR Innovations / Constructions",
+      "image": "/assets/hero-interior.jpeg",
+      "description": "Construções, reformas e manutenções residenciais, comerciais e industriais em Londrina e região.",
+      "telephone": "+5543999918594",
+      "email": "llbrinovacoes@gmail.com",
+      "url": "/",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. José Gabriel de Oliveira, 685 — Pq. Aurora",
+        "addressLocality": "Londrina",
+        "addressRegion": "PR",
+        "postalCode": "86047-360",
+        "addressCountry": "BR"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": -23.3045, "longitude": -51.1696 },
+      "areaServed": "Londrina e região",
+      "sameAs": ["https://instagram.com/llbr.inovacoes"]
+    }
+    </script>
+
+    <!-- Dados estruturados: perguntas frequentes (pode render como rich result no Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Vocês fazem orçamento sem compromisso?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. Agendamos uma visita técnica, entendemos a necessidade e enviamos um orçamento detalhado — sem compromisso." } },
+        { "@type": "Question", "name": "Atendem a minha região?", "acceptedAnswer": { "@type": "Answer", "text": "Atendemos Londrina e região. Chame no WhatsApp com o seu endereço que confirmamos o atendimento." } },
+        { "@type": "Question", "name": "Fazem serviços pequenos ou só obra grande?", "acceptedAnswer": { "@type": "Answer", "text": "Os dois. De um reparo de torneira ou tomada até a execução completa de uma obra residencial, comercial ou industrial." } },
+        { "@type": "Question", "name": "Dá para acompanhar o andamento da obra?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A LLBR faz acompanhamento diário, controle de etapas e ajustes em tempo real durante toda a obra." } },
+        { "@type": "Question", "name": "Como funciona o pagamento?", "acceptedAnswer": { "@type": "Answer", "text": "As condições são combinadas no orçamento, conforme o tamanho do serviço e as etapas da obra." } },
+        { "@type": "Question", "name": "Em quanto tempo começam o serviço?", "acceptedAnswer": { "@type": "Answer", "text": "Depende da agenda e do escopo. No orçamento já passamos uma previsão de início e de prazo de entrega." } }
+      ]
+    }
+    </script>
+
     <script type="module" src="/src/main.js"></script>
   </head>
   <body>
@@ -30,9 +86,10 @@
         <a href="#servicos">Serviços</a>
         <a href="#entenda">Entenda</a>
         <a href="#obras">Obras</a>
+        <a href="#destaques">Projetos</a>
         <a href="#resultados">Resultados</a>
-        <a href="#processo">Processo</a>
-        <a href="#melhorias">Melhorias</a>
+        <a href="#dicas">Dicas</a>
+        <a href="#faq">Dúvidas</a>
         <a href="#contato">Contato</a>
       </nav>
     </header>
@@ -82,6 +139,8 @@
             cada etapa com responsabilidade e transparência.
           </p>
         </div>
+        <!-- NÚMEROS / PROVAS SOCIAIS — preenchido por content.js (#stats-grid) -->
+        <div id="stats-grid" class="stats-grid section-inner" aria-label="A LLBR em números"></div>
       </section>
 
       <!-- SERVIÇOS — preenchido dinamicamente por content.js -->
@@ -125,13 +184,30 @@
               <p class="eyebrow">Trabalhos reais</p>
               <h2 id="obras-title">Fotos de obras e instalações</h2>
             </div>
-            <p>Registros de alvenaria, elétrica, hidráulica, telhados e acabamentos. Clique em qualquer foto para ampliar.</p>
+            <p>Registros de alvenaria, elétrica, hidráulica, telhados e acabamentos. Filtre por tipo de serviço e clique em qualquer foto para ampliar.</p>
           </div>
+          <!-- Chips de filtro por categoria — preenchidos por content.js -->
+          <div id="gallery-filters" class="gallery-filters" role="group" aria-label="Filtrar fotos por tipo de serviço"></div>
           <!--
             Container vazio: content.js injeta os <figure> aqui.
             O atributo data-lightbox é lido pelo lightbox.js para habilitar zoom.
           -->
           <div id="gallery-grid" class="gallery-grid" data-lightbox aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- PROJETOS EM DESTAQUE — álbuns (content.js → #projects-grid) -->
+      <section class="section" id="destaques" aria-labelledby="destaques-title">
+        <div class="section-inner">
+          <div class="section-heading split" data-reveal>
+            <div>
+              <p class="eyebrow">Projetos em destaque</p>
+              <h2 id="destaques-title">Obras do começo ao fim</h2>
+            </div>
+            <p>Projetos completos que a LLBR executou — do comercial ao residencial. Clique em um álbum para ver todas as fotos da obra.</p>
+          </div>
+          <!-- Container vazio: content.js injeta os cards de álbum aqui. -->
+          <div id="projects-grid" class="projects-grid" aria-live="polite"></div>
         </div>
       </section>
 
@@ -154,6 +230,21 @@
             Após a injeção, slider.js é reinicializado para detectar os novos [data-ba].
           -->
           <div id="ba-grid" class="ba-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <!-- DICAS & SEGURANÇA — conteúdo educativo (content.js → #tips-grid) -->
+      <section class="section section-band" id="dicas" aria-labelledby="dicas-title">
+        <div class="section-inner">
+          <div class="section-heading split" data-reveal>
+            <div>
+              <p class="eyebrow">Dicas &amp; Segurança</p>
+              <h2 id="dicas-title">Pra você não cair em furada</h2>
+            </div>
+            <p>Alguns problemas comuns de obra explicados de forma simples — e por que vale a pena chamar quem entende.</p>
+          </div>
+          <!-- Container vazio: content.js injeta os cards de dica aqui. -->
+          <div id="tips-grid" class="tips-grid" aria-live="polite"></div>
         </div>
       </section>
 
@@ -204,6 +295,20 @@
             Container vazio: content.js injeta os <li> de tags aqui.
           -->
           <ul id="tag-list" class="tag-list" aria-label="Áreas de atendimento da LLBR" aria-live="polite"></ul>
+        </div>
+      </section>
+
+      <!-- FAQ — perguntas frequentes (content.js → #faq-list) -->
+      <section class="section section-band" id="faq" aria-labelledby="faq-title">
+        <div class="section-inner faq-layout">
+          <div class="faq-intro" data-reveal>
+            <p class="eyebrow">Dúvidas frequentes</p>
+            <h2 id="faq-title">Perguntas que todo cliente faz</h2>
+            <p>Não achou a sua resposta? Chame a LLBR no WhatsApp — respondemos rápido.</p>
+            <a class="button button-primary" href="https://wa.me/5543999918594?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20os%20servi%C3%A7os" target="_blank" rel="noreferrer" data-contact="whatsapp-faq">Falar no WhatsApp</a>
+          </div>
+          <!-- Container vazio: content.js injeta os <details> do FAQ aqui. -->
+          <div id="faq-list" class="faq-list" aria-live="polite"></div>
         </div>
       </section>
 

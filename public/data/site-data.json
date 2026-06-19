@@ -1,6 +1,6 @@
 {
-  "_version": 3,
-  "_updated": "2026-06-18",
+  "_version": 4,
+  "_updated": "2026-06-19",
   "contact": {
     "name": "Ricardo",
     "phone": "(43) 99991-8594",
@@ -14,83 +14,1010 @@
     "title": "LLBR Innovations / Constructions",
     "subtitle": "Construções, reformas e manutenções com acompanhamento completo, execução técnica e atenção a cada etapa da obra.",
     "facts": [
-      { "dt": "Planejamento", "dd": "documentação, orçamento, materiais, prazos e equipes" },
-      { "dt": "Execução", "dd": "alvenaria, elétrica, hidráulica, pisos, telhados e acabamento" },
-      { "dt": "Entrega", "dd": "controle das etapas, descarte, ajustes e manutenção" }
+      {
+        "dt": "Planejamento",
+        "dd": "documentação, orçamento, materiais, prazos e equipes"
+      },
+      {
+        "dt": "Execução",
+        "dd": "alvenaria, elétrica, hidráulica, pisos, telhados e acabamento"
+      },
+      {
+        "dt": "Entrega",
+        "dd": "controle das etapas, descarte, ajustes e manutenção"
+      }
     ]
   },
   "services": [
-    { "code": "GESTÃO", "title": "Administração de construções", "desc": "Documentação e autorizações, acompanhamento diário da execução, planejamento, orçamentos, aquisição de materiais, controle de prazos, máquinas, terceiros, fluxo de equipes e aluguel de máquinas e caçambas.", "featured": true },
-    { "code": "PROJETO", "title": "Criação ou execução de projetos", "desc": "Elaboração e execução de projetos estruturais, arquitetônicos, elétricos e hidráulicos, com desenvolvimento e adequação conforme a obra.", "featured": false },
-    { "code": "OBRA", "title": "Construção e reformas", "desc": "Residenciais e comerciais: paredes, pisos, banheiros, cozinhas, piscinas, muros de arrimo e contenção, terraplanagem, fundações, radier, rampas, calçadas, telhados, platibandas, fachadas, anexos, rede de gás e troca de janelas e portas.", "featured": false },
-    { "code": "TÉCNICO", "title": "Elétrica", "desc": "Instalação completa, adequação e reparos: tomadas, interruptores, luminárias, fitas e trilhos de LED, spots, sensores, refletores, chuveiros, disjuntores, cabeamento, preparo de ar-condicionado, ventiladores, exaustores, canaletas de sobrepor, adequação 127V→220V, mapeamento de quadro e cerca eletrificada.", "featured": false },
-    { "code": "REDE", "title": "Internet e cabeamento", "desc": "Instalação e troca de infraestrutura de rede, adequação, cabeamento e crimpagem de pontos de internet.", "featured": false },
-    { "code": "TÉCNICO", "title": "Hidráulica", "desc": "Água quente e fria, esgoto e pluvial, caixa d'água, bombas, captação de água do telhado, manilhas, hidrômetro, boias, torneiras, duchas, chuveiros com crimpagem, válvula Hydra, caixa acoplada, sifões e filtro de água.", "featured": false },
-    { "code": "ACAB.", "title": "Acabamento", "desc": "Pintura interna e externa, muros, fachadas, metais e madeiras, decks, drywall e gesso, vidraçaria (box, espelhos, portas de vidro), marmoraria (granito em bancadas, pias e soleiras), papel de parede, pisos, revestimentos e rejuntes.", "featured": false },
-    { "code": "EXTERNO", "title": "Coberturas e estruturas", "desc": "Telhados e coberturas, troca e adequação de telhas, impermeabilização, calhas e rufos, calafetação, captação de pluviais, serralheria (corrimões, grades, portões, guarda-corpos, estruturas metálicas) e reparos de solda.", "featured": false },
-    { "code": "APOIO", "title": "Manutenções e apoio", "desc": "Ar-condicionado (instalação, conserto e limpeza), placas solares, limpeza de caixa d'água, marcenaria, instalação de eletrodomésticos e suportes, tanques e lagos, terraplanagem, roçagem, descarte de material e fretes e carretos.", "featured": false }
+    {
+      "code": "GESTÃO",
+      "title": "Administração de construções",
+      "desc": "Documentação e autorizações, acompanhamento diário da execução, planejamento, orçamentos, aquisição de materiais, controle de prazos, máquinas, terceiros, fluxo de equipes e aluguel de máquinas e caçambas.",
+      "featured": true
+    },
+    {
+      "code": "PROJETO",
+      "title": "Criação ou execução de projetos",
+      "desc": "Elaboração e execução de projetos estruturais, arquitetônicos, elétricos e hidráulicos, com desenvolvimento e adequação conforme a obra.",
+      "featured": false
+    },
+    {
+      "code": "OBRA",
+      "title": "Construção e reformas",
+      "desc": "Residenciais e comerciais: paredes, pisos, banheiros, cozinhas, piscinas, muros de arrimo e contenção, terraplanagem, fundações, radier, rampas, calçadas, telhados, platibandas, fachadas, anexos, rede de gás e troca de janelas e portas.",
+      "featured": false
+    },
+    {
+      "code": "TÉCNICO",
+      "title": "Elétrica",
+      "desc": "Instalação completa, adequação e reparos: tomadas, interruptores, luminárias, fitas e trilhos de LED, spots, sensores, refletores, chuveiros, disjuntores, cabeamento, preparo de ar-condicionado, ventiladores, exaustores, canaletas de sobrepor, adequação 127V→220V, mapeamento de quadro e cerca eletrificada.",
+      "featured": false
+    },
+    {
+      "code": "REDE",
+      "title": "Internet e cabeamento",
+      "desc": "Instalação e troca de infraestrutura de rede, adequação, cabeamento e crimpagem de pontos de internet.",
+      "featured": false
+    },
+    {
+      "code": "TÉCNICO",
+      "title": "Hidráulica",
+      "desc": "Água quente e fria, esgoto e pluvial, caixa d'água, bombas, captação de água do telhado, manilhas, hidrômetro, boias, torneiras, duchas, chuveiros com crimpagem, válvula Hydra, caixa acoplada, sifões e filtro de água.",
+      "featured": false
+    },
+    {
+      "code": "ACAB.",
+      "title": "Acabamento",
+      "desc": "Pintura interna e externa, muros, fachadas, metais e madeiras, decks, drywall e gesso, vidraçaria (box, espelhos, portas de vidro), marmoraria (granito em bancadas, pias e soleiras), papel de parede, pisos, revestimentos e rejuntes.",
+      "featured": false
+    },
+    {
+      "code": "EXTERNO",
+      "title": "Coberturas e estruturas",
+      "desc": "Telhados e coberturas, troca e adequação de telhas, impermeabilização, calhas e rufos, calafetação, captação de pluviais, serralheria (corrimões, grades, portões, guarda-corpos, estruturas metálicas) e reparos de solda.",
+      "featured": false
+    },
+    {
+      "code": "APOIO",
+      "title": "Manutenções e apoio",
+      "desc": "Ar-condicionado (instalação, conserto e limpeza), placas solares, limpeza de caixa d'água, marcenaria, instalação de eletrodomésticos e suportes, tanques e lagos, terraplanagem, roçagem, descarte de material e fretes e carretos.",
+      "featured": false
+    }
   ],
   "serviceExplainers": [
-    { "icon": "💧", "title": "Hidráulica", "what": "Tudo o que envolve água e esgoto na casa: canos, torneiras, chuveiros, caixa d'água, sifões, vazamentos e entupimentos.", "when": "Conta de água alta sem motivo, mancha de umidade na parede, pouca pressão, pia ou ralo entupido, ou troca de torneira, sifão e chuveiro." },
-    { "icon": "⚡", "title": "Elétrica", "what": "Tomadas, interruptores, lâmpadas, chuveiro, disjuntores e o quadro de luz — a parte que leva energia até cada ponto da casa.", "when": "Disjuntor que desarma, tomada que não funciona, luz piscando, cheiro de queimado, ou para instalar ar-condicionado e pontos novos." },
-    { "icon": "🪵", "title": "Marcenaria", "what": "Peças e móveis de madeira: prateleiras, painéis, portas, armários, decks e ajustes em móveis que já existem.", "when": "Instalar prateleira ou suporte de TV, colocar ou ajustar porta, montar móvel, fazer um deck ou consertar uma peça de madeira." },
-    { "icon": "🪨", "title": "Marmoraria", "what": "Pedras como granito e mármore: bancadas de cozinha, pias, soleiras de porta e peitoris de janela, cortadas e instaladas sob medida.", "when": "Trocar a bancada da cozinha, colocar uma pia de granito, ou instalar soleira de porta e peitoril de janela em pedra." },
-    { "icon": "🧱", "title": "Alvenaria e pisos", "what": "A parte bruta da obra: paredes, reboco, contrapiso e o assentamento de pisos e azulejos.", "when": "Levantar ou derrubar parede, piso soltando ou com som de \"oco\", trocar revestimento, ou nivelar um piso torto." },
-    { "icon": "🏠", "title": "Telhados e calhas", "what": "A cobertura da casa: telhas, calhas, rufos e impermeabilização que protegem tudo da chuva.", "when": "Telhado pingando, infiltração no teto, calha entupida ou furada, ou manchas de mofo que aparecem depois da chuva." },
-    { "icon": "🧰", "title": "Drywall e gesso", "what": "Paredes leves, forros e sancas feitos de gesso ou drywall — rápidos de montar e ótimos para acabamento.", "when": "Dividir um ambiente, fazer forro, esconder fiação, ou criar nichos e iluminação embutida." },
-    { "icon": "🎨", "title": "Acabamento e pintura", "what": "A parte final que deixa tudo bonito: pintura, vidros, box, espelhos, papel de parede e os detalhes.", "when": "Repintar ambientes, colocar box ou espelho, aplicar papel de parede, ou dar o acabamento final da reforma." }
+    {
+      "icon": "💧",
+      "title": "Hidráulica",
+      "what": "Tudo o que envolve água e esgoto na casa: canos, torneiras, chuveiros, caixa d'água, sifões, vazamentos e entupimentos.",
+      "when": "Conta de água alta sem motivo, mancha de umidade na parede, pouca pressão, pia ou ralo entupido, ou troca de torneira, sifão e chuveiro."
+    },
+    {
+      "icon": "⚡",
+      "title": "Elétrica",
+      "what": "Tomadas, interruptores, lâmpadas, chuveiro, disjuntores e o quadro de luz — a parte que leva energia até cada ponto da casa.",
+      "when": "Disjuntor que desarma, tomada que não funciona, luz piscando, cheiro de queimado, ou para instalar ar-condicionado e pontos novos."
+    },
+    {
+      "icon": "🪵",
+      "title": "Marcenaria",
+      "what": "Peças e móveis de madeira: prateleiras, painéis, portas, armários, decks e ajustes em móveis que já existem.",
+      "when": "Instalar prateleira ou suporte de TV, colocar ou ajustar porta, montar móvel, fazer um deck ou consertar uma peça de madeira."
+    },
+    {
+      "icon": "🪨",
+      "title": "Marmoraria",
+      "what": "Pedras como granito e mármore: bancadas de cozinha, pias, soleiras de porta e peitoris de janela, cortadas e instaladas sob medida.",
+      "when": "Trocar a bancada da cozinha, colocar uma pia de granito, ou instalar soleira de porta e peitoril de janela em pedra."
+    },
+    {
+      "icon": "🧱",
+      "title": "Alvenaria e pisos",
+      "what": "A parte bruta da obra: paredes, reboco, contrapiso e o assentamento de pisos e azulejos.",
+      "when": "Levantar ou derrubar parede, piso soltando ou com som de \"oco\", trocar revestimento, ou nivelar um piso torto."
+    },
+    {
+      "icon": "🏠",
+      "title": "Telhados e calhas",
+      "what": "A cobertura da casa: telhas, calhas, rufos e impermeabilização que protegem tudo da chuva.",
+      "when": "Telhado pingando, infiltração no teto, calha entupida ou furada, ou manchas de mofo que aparecem depois da chuva."
+    },
+    {
+      "icon": "🧰",
+      "title": "Drywall e gesso",
+      "what": "Paredes leves, forros e sancas feitos de gesso ou drywall — rápidos de montar e ótimos para acabamento.",
+      "when": "Dividir um ambiente, fazer forro, esconder fiação, ou criar nichos e iluminação embutida."
+    },
+    {
+      "icon": "🎨",
+      "title": "Acabamento e pintura",
+      "what": "A parte final que deixa tudo bonito: pintura, vidros, box, espelhos, papel de parede e os detalhes.",
+      "when": "Repintar ambientes, colocar box ou espelho, aplicar papel de parede, ou dar o acabamento final da reforma."
+    }
   ],
   "gallery": [
-    { "src": "/fotos/galeria/deck-madeira-01.jpeg", "alt": "Deck de madeira em área externa", "caption": "Deck de madeira" },
-    { "src": "/fotos/galeria/deck-madeira-02.jpeg", "alt": "Deck de madeira instalado em varanda", "caption": "Instalação de deck" },
-    { "src": "/fotos/galeria/pia-banheiro-granito.jpeg", "alt": "Pia de banheiro em granito com torneira nova", "caption": "Pia e torneira de banheiro" },
-    { "src": "/fotos/galeria/torneira-cozinha.jpeg", "alt": "Torneira de cozinha instalada", "caption": "Torneira de cozinha" },
-    { "src": "/fotos/galeria/ambiente-entregue.jpeg", "alt": "Ambiente entregue com piso laminado", "caption": "Ambiente entregue" },
-    { "src": "/fotos/galeria/purificador-agua.jpeg", "alt": "Purificador de água instalado", "caption": "Instalação de purificador" },
-    { "src": "/fotos/galeria/reforma-banheiro.jpeg", "alt": "Reforma de banheiro em andamento", "caption": "Reforma de banheiro" },
-    { "src": "/fotos/galeria/eletrica-tomada.jpeg", "alt": "Adequação de módulo de tomada com crimpagem", "caption": "Elétrica: adequação de tomada" },
-    { "src": "/fotos/galeria/reforma-cozinha.jpeg", "alt": "Reforma geral de cozinha em andamento", "caption": "Reforma de cozinha" },
-    { "src": "/fotos/galeria/deck-varanda.jpeg", "alt": "Deck de madeira instalado em varanda", "caption": "Deck de varanda" },
-    { "src": "/fotos/galeria/interruptor-inteligente.jpeg", "alt": "Instalação de interruptor Touch inteligente", "caption": "Interruptor inteligente" },
-    { "src": "/fotos/galeria/tomada-canaleta.jpeg", "alt": "Adequação de tomadas com canaletas de sobrepor", "caption": "Adequação de tomadas" },
-    { "src": "/fotos/galeria/projeto-planta.jpeg", "alt": "Desenvolvimento e adequação de projetos", "caption": "Projetos e plantas" },
-    { "src": "/fotos/galeria/visita-tecnica.jpeg", "alt": "Visita técnica para elaboração de orçamento", "caption": "Visita técnica e orçamento" },
-    { "src": "/fotos/galeria/reforma-sifao-pia.jpeg", "alt": "Reforma e instalação de sifão de pia em cozinha", "caption": "Reforma de sifão de pia" },
-    { "src": "/fotos/galeria/adaptador-esgoto-lavalouca.jpeg", "alt": "Instalação de adaptador de esgoto para lava-louças", "caption": "Esgoto para lava-louças" },
-    { "src": "/fotos/galeria/troca-hidrometro.jpeg", "alt": "Troca de hidrômetro de água", "caption": "Troca de hidrômetro" },
-    { "src": "/fotos/galeria/filtro-bebedouro.jpeg", "alt": "Instalação de filtro e bebedouro de água", "caption": "Filtros e bebedouros" },
-    { "src": "/fotos/galeria/caixa-dagua-pressurizador.jpeg", "alt": "Limpeza de caixa d'água e instalação de pressurizador mecânico", "caption": "Pressurizador de água" },
-    { "src": "/fotos/galeria/medidor-energia.jpeg", "alt": "Instalação de medidor de energia elétrica individual", "caption": "Medidor de energia individual" },
-    { "src": "/fotos/galeria/tomadas-127-220.jpeg", "alt": "Ponto de tomadas 127V e 220V com caixa de PVC de sobrepor", "caption": "Tomadas 127V e 220V" },
-    { "src": "/fotos/galeria/iluminacao-consultorio.jpeg", "alt": "Iluminação instalada em consultório", "caption": "Iluminação de consultório" },
-    { "src": "/fotos/galeria/vidracaria-espelho.jpeg", "alt": "Instalação de espelho e serviços de vidraçaria", "caption": "Vidraçaria e espelhos" },
-    { "src": "/fotos/galeria/porta-correr.jpeg", "alt": "Instalação de porta de correr", "caption": "Porta de correr" },
-    { "src": "/fotos/galeria/porta-drywall.jpeg", "alt": "Instalação de porta em parede de drywall", "caption": "Porta em drywall" },
-    { "src": "/fotos/galeria/barra-apoio-banheiro.jpeg", "alt": "Instalação de barra de apoio em banheiro", "caption": "Barra de apoio de banheiro" },
-    { "src": "/fotos/galeria/quadros-prateleiras.jpeg", "alt": "Instalação de quadros e prateleiras na parede", "caption": "Quadros e prateleiras" },
-    { "src": "/fotos/galeria/impermeabilizacao-telhado.jpeg", "alt": "Impermeabilização de telhado e estrutura para conter vazamentos", "caption": "Impermeabilização de telhado" }
+    {
+      "src": "/fotos/galeria/deck-madeira-01.jpeg",
+      "alt": "Deck de madeira em área externa",
+      "caption": "Deck de madeira",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/deck-madeira-02.jpeg",
+      "alt": "Deck de madeira instalado em varanda",
+      "caption": "Instalação de deck",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/pia-banheiro-granito.jpeg",
+      "alt": "Pia de banheiro em granito com torneira nova",
+      "caption": "Pia e torneira de banheiro",
+      "category": "acabamento"
+    },
+    {
+      "src": "/fotos/galeria/torneira-cozinha.jpeg",
+      "alt": "Torneira de cozinha instalada",
+      "caption": "Torneira de cozinha",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/ambiente-entregue.jpeg",
+      "alt": "Ambiente entregue com piso laminado",
+      "caption": "Ambiente entregue",
+      "category": "acabamento"
+    },
+    {
+      "src": "/fotos/galeria/purificador-agua.jpeg",
+      "alt": "Purificador de água instalado",
+      "caption": "Instalação de purificador",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/reforma-banheiro.jpeg",
+      "alt": "Reforma de banheiro em andamento",
+      "caption": "Reforma de banheiro",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/eletrica-tomada.jpeg",
+      "alt": "Adequação de módulo de tomada com crimpagem",
+      "caption": "Elétrica: adequação de tomada",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/reforma-cozinha.jpeg",
+      "alt": "Reforma geral de cozinha em andamento",
+      "caption": "Reforma de cozinha",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/deck-varanda.jpeg",
+      "alt": "Deck de madeira instalado em varanda",
+      "caption": "Deck de varanda",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/interruptor-inteligente.jpeg",
+      "alt": "Instalação de interruptor Touch inteligente",
+      "caption": "Interruptor inteligente",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/tomada-canaleta.jpeg",
+      "alt": "Adequação de tomadas com canaletas de sobrepor",
+      "caption": "Adequação de tomadas",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/projeto-planta.jpeg",
+      "alt": "Desenvolvimento e adequação de projetos",
+      "caption": "Projetos e plantas",
+      "category": "gestao"
+    },
+    {
+      "src": "/fotos/galeria/visita-tecnica.jpeg",
+      "alt": "Visita técnica para elaboração de orçamento",
+      "caption": "Visita técnica e orçamento",
+      "category": "gestao"
+    },
+    {
+      "src": "/fotos/galeria/reforma-sifao-pia.jpeg",
+      "alt": "Reforma e instalação de sifão de pia em cozinha",
+      "caption": "Reforma de sifão de pia",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/adaptador-esgoto-lavalouca.jpeg",
+      "alt": "Instalação de adaptador de esgoto para lava-louças",
+      "caption": "Esgoto para lava-louças",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/troca-hidrometro.jpeg",
+      "alt": "Troca de hidrômetro de água",
+      "caption": "Troca de hidrômetro",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/filtro-bebedouro.jpeg",
+      "alt": "Instalação de filtro e bebedouro de água",
+      "caption": "Filtros e bebedouros",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/caixa-dagua-pressurizador.jpeg",
+      "alt": "Limpeza de caixa d'água e instalação de pressurizador mecânico",
+      "caption": "Pressurizador de água",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/medidor-energia.jpeg",
+      "alt": "Instalação de medidor de energia elétrica individual",
+      "caption": "Medidor de energia individual",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/tomadas-127-220.jpeg",
+      "alt": "Ponto de tomadas 127V e 220V com caixa de PVC de sobrepor",
+      "caption": "Tomadas 127V e 220V",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/iluminacao-consultorio.jpeg",
+      "alt": "Iluminação instalada em consultório",
+      "caption": "Iluminação de consultório",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/vidracaria-espelho.jpeg",
+      "alt": "Instalação de espelho e serviços de vidraçaria",
+      "caption": "Vidraçaria e espelhos",
+      "category": "acabamento"
+    },
+    {
+      "src": "/fotos/galeria/porta-correr.jpeg",
+      "alt": "Instalação de porta de correr",
+      "caption": "Porta de correr",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/porta-drywall.jpeg",
+      "alt": "Instalação de porta em parede de drywall",
+      "caption": "Porta em drywall",
+      "category": "drywall"
+    },
+    {
+      "src": "/fotos/galeria/barra-apoio-banheiro.jpeg",
+      "alt": "Instalação de barra de apoio em banheiro",
+      "caption": "Barra de apoio de banheiro",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/quadros-prateleiras.jpeg",
+      "alt": "Instalação de quadros e prateleiras na parede",
+      "caption": "Quadros e prateleiras",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/impermeabilizacao-telhado.jpeg",
+      "alt": "Impermeabilização de telhado e estrutura para conter vazamentos",
+      "caption": "Impermeabilização de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/vedacao-cuba-pu40.jpeg",
+      "alt": "Vedação com PU40 de cuba de pia de cozinha",
+      "caption": "Vedação de cuba de pia (PU40)",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/hidrometro-02.jpeg",
+      "alt": "Troca de hidrômetro de água",
+      "caption": "Troca de hidrômetro",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/caixa-dagua-limpeza-01.jpeg",
+      "alt": "Limpeza de caixa d'água",
+      "caption": "Limpeza de caixa d'água",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/caixa-dagua-limpeza-02.jpeg",
+      "alt": "Instalação de pressurizador mecânico de água",
+      "caption": "Pressurizador de água",
+      "category": "hidraulica"
+    },
+    {
+      "src": "/fotos/galeria/iluminacao-consultorio-02.jpeg",
+      "alt": "Iluminação instalada em consultório",
+      "caption": "Iluminação de consultório",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/resistencia-chuveiro.jpeg",
+      "alt": "Instalação e troca de resistência de chuveiro",
+      "caption": "Resistência de chuveiro",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/lustre-01.jpeg",
+      "alt": "Instalação de lustre",
+      "caption": "Instalação de lustre",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/lustre-02.jpeg",
+      "alt": "Instalação de lustre",
+      "caption": "Instalação de lustre",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/lustre-03.jpeg",
+      "alt": "Instalação de lustre decorativo",
+      "caption": "Instalação de lustre",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/eletrica-detalhe-01.jpeg",
+      "alt": "Detalhe de instalação elétrica",
+      "caption": "Instalação elétrica",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/eletrica-detalhe-02.jpeg",
+      "alt": "Detalhe de instalação elétrica",
+      "caption": "Instalação elétrica",
+      "category": "eletrica"
+    },
+    {
+      "src": "/fotos/galeria/cortes-parede-01.jpeg",
+      "alt": "Cortes na parede para infraestrutura de tomadas, água e gás",
+      "caption": "Infraestrutura na parede",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/cortes-parede-02.jpeg",
+      "alt": "Cortes na parede para infraestrutura elétrica e hidráulica",
+      "caption": "Infraestrutura na parede",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/cortes-parede-03.jpeg",
+      "alt": "Cortes na parede para passagem de tubulação",
+      "caption": "Infraestrutura na parede",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/alvenaria-piso-01.jpeg",
+      "alt": "Serviço de alvenaria para adequação de piso",
+      "caption": "Adequação de piso",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/alvenaria-piso-02.jpeg",
+      "alt": "Serviço de alvenaria para adequação de piso",
+      "caption": "Adequação de piso",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/reforma-ambiente-01.jpeg",
+      "alt": "Reforma de ambiente",
+      "caption": "Reforma de ambiente",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/reforma-ambiente-02.jpeg",
+      "alt": "Reforma de ambiente",
+      "caption": "Reforma de ambiente",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/reforma-ambiente-03.jpeg",
+      "alt": "Reforma de ambiente",
+      "caption": "Reforma de ambiente",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/reforma-ambiente-04.jpeg",
+      "alt": "Reforma de ambiente",
+      "caption": "Reforma de ambiente",
+      "category": "alvenaria"
+    },
+    {
+      "src": "/fotos/galeria/impermeabilizacao-telhado-02.jpeg",
+      "alt": "Impermeabilização de telhado e estrutura",
+      "caption": "Impermeabilização de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/impermeabilizacao-telhado-03.jpeg",
+      "alt": "Impermeabilização de telhado e estrutura",
+      "caption": "Impermeabilização de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/impermeabilizacao-telhado-04.jpeg",
+      "alt": "Impermeabilização de telhado e estrutura",
+      "caption": "Impermeabilização de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/impermeabilizacao-marquise-01.jpeg",
+      "alt": "Impermeabilização de marquise e platibanda",
+      "caption": "Impermeabilização de marquise",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/impermeabilizacao-marquise-02.jpeg",
+      "alt": "Impermeabilização de marquise e platibanda",
+      "caption": "Impermeabilização de platibanda",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/remocao-letreiro-01.jpeg",
+      "alt": "Remoção de letreiro em marquise",
+      "caption": "Remoção de letreiro em marquise",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/remocao-letreiro-02.jpeg",
+      "alt": "Remoção de letreiro em marquise",
+      "caption": "Remoção de letreiro em marquise",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/inspecao-telhado-01.jpeg",
+      "alt": "Inspeção de vazamento em telhado e estrutura de madeira",
+      "caption": "Inspeção de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/inspecao-telhado-02.jpeg",
+      "alt": "Inspeção de vazamento em telhado",
+      "caption": "Inspeção de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/inspecao-telhado-03.jpeg",
+      "alt": "Inspeção de estrutura de telhado",
+      "caption": "Inspeção de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/inspecao-telhado-04.jpeg",
+      "alt": "Inspeção de estrutura de telhado",
+      "caption": "Inspeção de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/inspecao-telhado-05.jpeg",
+      "alt": "Inspeção de vazamento em telhado",
+      "caption": "Inspeção de telhado",
+      "category": "telhados"
+    },
+    {
+      "src": "/fotos/galeria/secadora-01.jpeg",
+      "alt": "Instalação de secadora de roupas na parede",
+      "caption": "Instalação de secadora",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/secadora-02.jpeg",
+      "alt": "Instalação de secadora de roupas na parede",
+      "caption": "Instalação de secadora",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/secadora-03.jpeg",
+      "alt": "Instalação de secadora de roupas na parede",
+      "caption": "Instalação de secadora",
+      "category": "marcenaria"
+    },
+    {
+      "src": "/fotos/galeria/gestao-material-01.jpeg",
+      "alt": "Conferência e gestão de material de obra",
+      "caption": "Gestão de material",
+      "category": "gestao"
+    },
+    {
+      "src": "/fotos/galeria/gestao-material-02.jpeg",
+      "alt": "Conferência e gestão de material de obra",
+      "caption": "Gestão de material",
+      "category": "gestao"
+    },
+    {
+      "src": "/fotos/galeria/gestao-material-03.jpeg",
+      "alt": "Conferência e gestão de material de obra",
+      "caption": "Gestão de material",
+      "category": "gestao"
+    },
+    {
+      "src": "/fotos/galeria/gestao-material-04.jpeg",
+      "alt": "Conferência e gestão de material de obra",
+      "caption": "Gestão de material",
+      "category": "gestao"
+    }
   ],
   "beforeAfter": [
     {
       "title": "Troca de torre da caixa acoplada",
       "label": "Comparação: caixa acoplada antes e depois da troca",
-      "before": { "src": "/fotos/antes/caixa-acoplada-antes.jpeg", "alt": "Caixa acoplada antes da troca da torre de entrada" },
-      "after":  { "src": "/fotos/depois/caixa-acoplada-depois.jpeg", "alt": "Caixa acoplada depois da troca da torre de entrada" }
+      "before": {
+        "src": "/fotos/antes/caixa-acoplada-antes.jpeg",
+        "alt": "Caixa acoplada antes da troca da torre de entrada"
+      },
+      "after": {
+        "src": "/fotos/depois/caixa-acoplada-depois.jpeg",
+        "alt": "Caixa acoplada depois da troca da torre de entrada"
+      }
     },
     {
       "title": "Revisão de compressor e linha de ar",
       "label": "Comparação: compressor antes e depois da revisão",
-      "before": { "src": "/fotos/antes/compressor-antes.jpeg", "alt": "Compressor antes da revisão e manutenção" },
-      "after":  { "src": "/fotos/depois/compressor-depois.jpeg", "alt": "Compressor depois da revisão e manutenção" }
+      "before": {
+        "src": "/fotos/antes/compressor-antes.jpeg",
+        "alt": "Compressor antes da revisão e manutenção"
+      },
+      "after": {
+        "src": "/fotos/depois/compressor-depois.jpeg",
+        "alt": "Compressor depois da revisão e manutenção"
+      }
     },
     {
       "title": "Pintura de teto de banheiro",
       "label": "Comparação: teto do banheiro antes e depois da pintura e tratamento de umidade",
-      "before": { "src": "/fotos/antes/pintura-banheiro-antes.jpeg", "alt": "Teto do banheiro com manchas de umidade antes da pintura" },
-      "after":  { "src": "/fotos/depois/pintura-banheiro-depois.jpeg", "alt": "Teto do banheiro pintado e sem manchas depois da reforma" }
+      "before": {
+        "src": "/fotos/antes/pintura-banheiro-antes.jpeg",
+        "alt": "Teto do banheiro com manchas de umidade antes da pintura"
+      },
+      "after": {
+        "src": "/fotos/depois/pintura-banheiro-depois.jpeg",
+        "alt": "Teto do banheiro pintado e sem manchas depois da reforma"
+      }
     }
   ],
   "tags": [
-    "Construção geral","Reformas residenciais","Reformas comerciais","Banheiros","Cozinhas","Piscinas","Muros e arrimos","Terraplanagem","Fundações","Concretagem","Telhados","Fachadas","Elétrica","Hidráulica","Rede de gás","Internet cabeada","Pintura","Decks","Calhas e rufos","Serralheria","Drywall e gesso","Vidros e box","Marcenaria","Marmoraria","Ar-condicionado","Placas solares","Papel de parede","Instalações domésticas","Lagos e tanques","Roçagem","Descarte de material","Fretes e carretos"
+    "Construção geral",
+    "Reformas residenciais",
+    "Reformas comerciais",
+    "Banheiros",
+    "Cozinhas",
+    "Piscinas",
+    "Muros e arrimos",
+    "Terraplanagem",
+    "Fundações",
+    "Concretagem",
+    "Telhados",
+    "Fachadas",
+    "Elétrica",
+    "Hidráulica",
+    "Rede de gás",
+    "Internet cabeada",
+    "Pintura",
+    "Decks",
+    "Calhas e rufos",
+    "Serralheria",
+    "Drywall e gesso",
+    "Vidros e box",
+    "Marcenaria",
+    "Marmoraria",
+    "Ar-condicionado",
+    "Placas solares",
+    "Papel de parede",
+    "Instalações domésticas",
+    "Lagos e tanques",
+    "Roçagem",
+    "Descarte de material",
+    "Fretes e carretos"
+  ],
+  "galleryCategories": [
+    {
+      "slug": "todos",
+      "label": "Todos"
+    },
+    {
+      "slug": "hidraulica",
+      "label": "Hidráulica"
+    },
+    {
+      "slug": "eletrica",
+      "label": "Elétrica"
+    },
+    {
+      "slug": "telhados",
+      "label": "Telhados & calhas"
+    },
+    {
+      "slug": "alvenaria",
+      "label": "Alvenaria & reformas"
+    },
+    {
+      "slug": "drywall",
+      "label": "Drywall & gesso"
+    },
+    {
+      "slug": "marcenaria",
+      "label": "Marcenaria & instalações"
+    },
+    {
+      "slug": "acabamento",
+      "label": "Acabamento"
+    },
+    {
+      "slug": "gestao",
+      "label": "Gestão & projetos"
+    }
+  ],
+  "projects": [
+    {
+      "key": "cafeteria-lcc",
+      "title": "Cafeteria — Londrina Country Club",
+      "location": "Londrina Country Club",
+      "category": "comercial",
+      "desc": "Construção e instalação elétrica completa de uma cafeteria, do início ao fim.",
+      "cover": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-01.jpeg",
+      "photos": [
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-01.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (1)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-02.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (2)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-03.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (3)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-04.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (4)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-05.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (5)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-06.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (6)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-07.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (7)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-08.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (8)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-09.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (9)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-10.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (10)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-11.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (11)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-12.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (12)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-13.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (13)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-14.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (14)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-15.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (15)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-16.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (16)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-17.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (17)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-18.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (18)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-19.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (19)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-20.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (20)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-21.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (21)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-22.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (22)"
+        },
+        {
+          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-23.jpeg",
+          "alt": "Obra da cafeteria no Londrina Country Club (23)"
+        }
+      ]
+    },
+    {
+      "key": "consultorio-medico",
+      "title": "Reforma de consultório médico",
+      "location": "Consultório médico",
+      "category": "comercial",
+      "desc": "Reforma geral com drywall, elétrica e acabamento de um consultório médico.",
+      "cover": "/fotos/projetos/consultorio-medico/consultorio-medico-01.jpeg",
+      "photos": [
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-01.jpeg",
+          "alt": "Reforma de consultório médico (1)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-02.jpeg",
+          "alt": "Reforma de consultório médico (2)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-03.jpeg",
+          "alt": "Reforma de consultório médico (3)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-04.jpeg",
+          "alt": "Reforma de consultório médico (4)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-05.jpeg",
+          "alt": "Reforma de consultório médico (5)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-06.jpeg",
+          "alt": "Reforma de consultório médico (6)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-07.jpeg",
+          "alt": "Reforma de consultório médico (7)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-08.jpeg",
+          "alt": "Reforma de consultório médico (8)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-09.jpeg",
+          "alt": "Reforma de consultório médico (9)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-10.jpeg",
+          "alt": "Reforma de consultório médico (10)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-11.jpeg",
+          "alt": "Reforma de consultório médico (11)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-12.jpeg",
+          "alt": "Reforma de consultório médico (12)"
+        },
+        {
+          "src": "/fotos/projetos/consultorio-medico/consultorio-medico-13.jpeg",
+          "alt": "Reforma de consultório médico (13)"
+        }
+      ]
+    },
+    {
+      "key": "reforma-antes-depois-1",
+      "title": "Reforma residencial — antes e depois",
+      "location": "Residencial",
+      "category": "alvenaria",
+      "desc": "Transformação completa de um ambiente: do estado inicial à entrega.",
+      "cover": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-01.jpeg",
+      "photos": [
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-01.jpeg",
+          "alt": "Reforma residencial, antes e depois (1)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-02.jpeg",
+          "alt": "Reforma residencial, antes e depois (2)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-03.jpeg",
+          "alt": "Reforma residencial, antes e depois (3)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-04.jpeg",
+          "alt": "Reforma residencial, antes e depois (4)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-05.jpeg",
+          "alt": "Reforma residencial, antes e depois (5)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-06.jpeg",
+          "alt": "Reforma residencial, antes e depois (6)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-07.jpeg",
+          "alt": "Reforma residencial, antes e depois (7)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-08.jpeg",
+          "alt": "Reforma residencial, antes e depois (8)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-09.jpeg",
+          "alt": "Reforma residencial, antes e depois (9)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-10.jpeg",
+          "alt": "Reforma residencial, antes e depois (10)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-1/reforma-antes-depois-1-11.jpeg",
+          "alt": "Reforma residencial, antes e depois (11)"
+        }
+      ]
+    },
+    {
+      "key": "reforma-antes-depois-2",
+      "title": "Reforma de ambiente — antes e depois",
+      "location": "Residencial",
+      "category": "alvenaria",
+      "desc": "Outra transformação documentada do começo ao fim da obra.",
+      "cover": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-01.jpeg",
+      "photos": [
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-01.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (1)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-02.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (2)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-03.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (3)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-04.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (4)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-05.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (5)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-06.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (6)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-07.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (7)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-08.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (8)"
+        },
+        {
+          "src": "/fotos/projetos/reforma-antes-depois-2/reforma-antes-depois-2-09.jpeg",
+          "alt": "Reforma de ambiente, antes e depois (9)"
+        }
+      ]
+    },
+    {
+      "key": "manutencao-industrial",
+      "title": "Manutenção de máquinas industriais",
+      "location": "Industrial",
+      "category": "manutencao",
+      "desc": "Manutenção preventiva e limpeza de máquinas e equipamentos industriais.",
+      "cover": "/fotos/projetos/manutencao-industrial/manutencao-industrial-01.jpeg",
+      "photos": [
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-01.jpeg",
+          "alt": "Manutenção de máquina industrial (1)"
+        },
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-02.jpeg",
+          "alt": "Manutenção de máquina industrial (2)"
+        },
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-03.jpeg",
+          "alt": "Manutenção de máquina industrial (3)"
+        },
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-04.jpeg",
+          "alt": "Manutenção de máquina industrial (4)"
+        },
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-05.jpeg",
+          "alt": "Manutenção de máquina industrial (5)"
+        },
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-06.jpeg",
+          "alt": "Manutenção de máquina industrial (6)"
+        },
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-07.jpeg",
+          "alt": "Manutenção de máquina industrial (7)"
+        },
+        {
+          "src": "/fotos/projetos/manutencao-industrial/manutencao-industrial-08.jpeg",
+          "alt": "Manutenção de máquina industrial (8)"
+        }
+      ]
+    }
+  ],
+  "tips": [
+    {
+      "icon": "⚠️",
+      "title": "Conexão elétrica malfeita é perigo",
+      "body": "A falta de uma conexão correta ao instalar um chuveiro ou uma tomada pode causar curto-circuito e um grande prejuízo. Instalação elétrica é serviço para profissional.",
+      "images": [
+        "/fotos/dicas/perigo-eletrica-01.jpeg",
+        "/fotos/dicas/perigo-eletrica-02.jpeg"
+      ]
+    },
+    {
+      "icon": "🧱",
+      "title": "Por que o piso solta ou fica \"oco\"?",
+      "body": "Aquele som de oco (vazio por dentro) costuma ser erro na aplicação da argamassa: falta de argamassa ou produto fora da especificação. O assentamento certo evita o problema.",
+      "images": [
+        "/fotos/dicas/piso-oco-01.jpeg",
+        "/fotos/dicas/piso-oco-02.jpeg"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Vocês fazem orçamento sem compromisso?",
+      "a": "Sim. Agendamos uma visita técnica, entendemos a necessidade e enviamos um orçamento detalhado — sem compromisso."
+    },
+    {
+      "q": "Atendem a minha região?",
+      "a": "Atendemos Londrina e região. Chame no WhatsApp com o seu endereço que confirmamos o atendimento."
+    },
+    {
+      "q": "Fazem serviços pequenos ou só obra grande?",
+      "a": "Os dois. De um reparo de torneira ou tomada até a execução completa de uma obra residencial, comercial ou industrial."
+    },
+    {
+      "q": "Dá para acompanhar o andamento da obra?",
+      "a": "Sim. A LLBR faz acompanhamento diário, controle de etapas e ajustes em tempo real durante toda a obra."
+    },
+    {
+      "q": "Como funciona o pagamento?",
+      "a": "As condições são combinadas no orçamento, conforme o tamanho do serviço e as etapas da obra."
+    },
+    {
+      "q": "Em quanto tempo começam o serviço?",
+      "a": "Depende da agenda e do escopo. No orçamento já passamos uma previsão de início e de prazo de entrega."
+    }
+  ],
+  "stats": [
+    {
+      "number": "A→Z",
+      "label": "Da documentação à entrega da obra"
+    },
+    {
+      "number": "Londrina",
+      "label": "Atendimento em Londrina e região"
+    },
+    {
+      "number": "Res · Com · Ind",
+      "label": "Residencial, comercial e industrial"
+    },
+    {
+      "number": "Sem compromisso",
+      "label": "Visita técnica e orçamento"
+    }
   ]
 }
