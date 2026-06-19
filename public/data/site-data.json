@@ -244,12 +244,6 @@
       "category": "hidraulica"
     },
     {
-      "src": "/fotos/galeria/caixa-dagua-pressurizador.jpeg",
-      "alt": "Limpeza de caixa d'água e instalação de pressurizador mecânico",
-      "caption": "Pressurizador de água",
-      "category": "hidraulica"
-    },
-    {
       "src": "/fotos/galeria/medidor-energia.jpeg",
       "alt": "Instalação de medidor de energia elétrica individual",
       "caption": "Medidor de energia individual",
@@ -322,12 +316,6 @@
       "category": "hidraulica"
     },
     {
-      "src": "/fotos/galeria/caixa-dagua-limpeza-02.jpeg",
-      "alt": "Instalação de pressurizador mecânico de água",
-      "caption": "Pressurizador de água",
-      "category": "hidraulica"
-    },
-    {
       "src": "/fotos/galeria/iluminacao-consultorio-02.jpeg",
       "alt": "Iluminação instalada em consultório",
       "caption": "Iluminação de consultório",
@@ -359,15 +347,15 @@
     },
     {
       "src": "/fotos/galeria/eletrica-detalhe-01.jpeg",
-      "alt": "Detalhe de instalação elétrica",
-      "caption": "Instalação elétrica",
-      "category": "eletrica"
+      "alt": "Instalação de suporte de parede para violão",
+      "caption": "Instalação de suporte de objetos (violão)",
+      "category": "marcenaria"
     },
     {
       "src": "/fotos/galeria/eletrica-detalhe-02.jpeg",
-      "alt": "Detalhe de instalação elétrica",
-      "caption": "Instalação elétrica",
-      "category": "eletrica"
+      "alt": "Instalação de suporte de parede para violão",
+      "caption": "Instalação de suporte de objetos (violão)",
+      "category": "marcenaria"
     },
     {
       "src": "/fotos/galeria/cortes-parede-01.jpeg",
@@ -401,27 +389,27 @@
     },
     {
       "src": "/fotos/galeria/reforma-ambiente-01.jpeg",
-      "alt": "Reforma de ambiente",
-      "caption": "Reforma de ambiente",
+      "alt": "Rastreamento de vazamento — abertura no forro para localizar a tubulação",
+      "caption": "Rastreamento de vazamento",
       "category": "alvenaria"
     },
     {
       "src": "/fotos/galeria/reforma-ambiente-02.jpeg",
-      "alt": "Reforma de ambiente",
-      "caption": "Reforma de ambiente",
-      "category": "alvenaria"
+      "alt": "Conserto de vazamento em tubulação",
+      "caption": "Conserto de vazamentos",
+      "category": "hidraulica"
     },
     {
       "src": "/fotos/galeria/reforma-ambiente-03.jpeg",
-      "alt": "Reforma de ambiente",
-      "caption": "Reforma de ambiente",
-      "category": "alvenaria"
+      "alt": "Conserto de vazamento em tubulação",
+      "caption": "Conserto de vazamentos",
+      "category": "hidraulica"
     },
     {
       "src": "/fotos/galeria/reforma-ambiente-04.jpeg",
-      "alt": "Reforma de ambiente",
-      "caption": "Reforma de ambiente",
-      "category": "alvenaria"
+      "alt": "Conserto de vazamento em tubulação",
+      "caption": "Conserto de vazamentos",
+      "category": "hidraulica"
     },
     {
       "src": "/fotos/galeria/impermeabilizacao-telhado-02.jpeg",
@@ -655,12 +643,8 @@
       "location": "Londrina Country Club",
       "category": "comercial",
       "desc": "Construção e instalação elétrica completa de uma cafeteria, do início ao fim.",
-      "cover": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-01.jpeg",
+      "cover": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-02.jpeg",
       "photos": [
-        {
-          "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-01.jpeg",
-          "alt": "Obra da cafeteria no Londrina Country Club (1)"
-        },
         {
           "src": "/fotos/projetos/cafeteria-lcc/cafeteria-lcc-02.jpeg",
           "alt": "Obra da cafeteria no Londrina Country Club (2)"
